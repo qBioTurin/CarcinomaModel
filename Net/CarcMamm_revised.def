@@ -1,0 +1,13 @@
+|2
+FromList["alpha", 0] * (#IntLeu2) / (#IntLeu2 + 400) * #TCcells
+|14
+0.009 * (#IntLeu2) / (#IntLeu2 + 1000) * #THcells
+|23
+(1 - #CCcells / 10000000) * 0.0226 * #CCcells
+|29
+0.0035 * (#IntLeu2) / (#IntLeu2 + 400) * #Bcell
+|31
+0.009 * (#IntLeu12) / (#IntLeu12 + 1000) * #THcells
+|256
+%
+|

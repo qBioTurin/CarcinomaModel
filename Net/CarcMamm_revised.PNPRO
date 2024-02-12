@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="CarcMamm" show-fluid-cmd="false" zoom="125">
+    <nodes>
+      <place label-x="-2.0" label-y="0.0" name="VC" x="31.0" y="22.0"/>
+      <place label-x="2.0" label-y="-1.5" name="TCcells" x="50.0" y="19.0"/>
+      <transition delay="0.07701635" delay-x="-0.5" delay-y="-1.0" label-y="-2.0" name="DieVC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="22.55" y="22.0"/>
+      <transition delay="FromList[&quot;alpha&quot;,0]* (#IntLeu2)/(#IntLeu2+400) * #TCcells" delay-x="-6.5" delay-y="-2.0" label-x="-1.0" label-y="2.5" name="IntTC_IL2" nservers-x="0.5" type="EXP" x="63.55" y="19.0"/>
+      <place label-x="4.5" label-y="-1.5" name="IntLeu2" x="74.0" y="18.0"/>
+      <place label-x="2.125" label-y="1.5625" name="ABcell" x="27.0" y="38.0"/>
+      <transition delay="0.001" delay-x="-1.5" delay-y="1.5" label-x="-3.0" label-y="-2.0" name="IntVC_AB" nservers-x="0.5" rotation="3.141592653589793" type="EXP" x="31.55" y="31.0"/>
+      <transition delay="0.03300701" label-x="-2.5" label-y="-1.0" name="DieTC" nservers-x="0.5" type="EXP" x="57.55" y="14.0"/>
+      <place label-y="2.0" name="Bcell" x="19.0" y="47.0"/>
+      <transition delay="3" delay-x="-2.0" delay-y="-1.0" label-x="2.8125" label-y="1.5" name="IntAB_B" nservers-x="0.5" type="EXP" x="20.55" y="40.0"/>
+      <transition delay="0.09902103" delay-x="-0.5" delay-y="1.5" label-x="-2.1875" label-y="-0.5" name="DieAB" nservers-x="0.5" type="EXP" x="20.7375" y="35.0"/>
+      <transition delay="0.001" delay-x="-2.5" delay-y="0.5" label-x="0.5" label-y="2.0" name="IntVC_TC" nservers-x="0.5" rotation="-0.0" type="EXP" x="42.55" y="31.0"/>
+      <place label-x="-3.625" label-y="0.125" name="TAAcell" x="38.0" y="45.1875"/>
+      <transition delay="0.2" delay-y="0.5" label-x="-0.5625" label-y="2.0" name="IntTC_VC" nservers-x="0.5" type="EXP" x="38.55" y="18.0"/>
+      <place label-x="-3.5" label-y="0.0" name="CCcells" x="27.0" y="55.0"/>
+      <place label-x="2.5" label-y="-2.0" name="APCcells" x="56.0" y="45.1875"/>
+      <place label-x="-2.5" label-y="1.4375" name="THcells" x="74.1875" y="35.0"/>
+      <place label-x="-0.125" label-y="-1.8125" name="IntLeu12" x="53.0" y="31.0"/>
+      <transition delay="0.07" label-x="2.5" label-y="-2.0" name="Int_APC_TAA" nservers-x="0.5" type="EXP" x="47.55" y="45.1875"/>
+      <transition delay="0.15" label-x="1.0625" label-y="2.1875" name="IntTH_APC" nservers-x="0.5" type="EXP" x="65.55" y="45.0"/>
+      <transition delay="0.04620981" label-x="-4.0" label-y="0.0" name="DieAPC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="50.0"/>
+      <transition delay="0.04620981" delay-y="-1.0" label-y="3.0" name="DieTH" nservers-x="0.5" type="EXP" x="78.7375" y="35.0"/>
+      <transition delay="5" delay-x="1.0" delay-y="-0.5" label-x="1.1500000000000057" label-y="-1.8500000000000014" name="IntIL2_TH" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="27.0"/>
+      <transition delay="0.009 * (#IntLeu2)/(#IntLeu2+1000) *#THcells" delay-x="1.5" delay-y="0.0" label-x="2.0" name="IntTH_IL2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.7375" y="28.0"/>
+      <transition delay="0.2310491" delay-x="0.625" delay-y="0.5625" label-x="1.0" label-y="2.0" name="DieIL2" nservers-x="0.5" type="EXP" x="68.55" y="22.0"/>
+      <transition delay="0.00009" delay-x="-0.5" delay-y="0.5" label-y="-1.0" name="IntIL12_TH" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="64.55" y="33.0"/>
+      <transition delay="0.001" delay-x="-2.5" delay-y="0.0" label-x="2.5" label-y="-2.0" name="IntIL12_TC" nservers-x="0.5" type="EXP" x="53.55" y="25.0"/>
+      <transition delay="0.07701635" label-x="3.1875" label-y="0.125" name="DieIL12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="37.0"/>
+      <transition delay="0.0001" label-x="4.0" label-y="-0.5" name="IntIL2_TC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="13.0"/>
+      <transition delay="0.0001" delay-x="-2.0" label-x="-4.0" label-y="0.0" name="IntIL2_B" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="85.55" y="14.0"/>
+      <transition delay="0.0000001176" delay-x="-2.75" delay-y="1.3125" label-x="-3.0" label-y="0.0" name="DieCC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="61.0"/>
+      <transition delay="0.07701635" delay-x="-1.625" delay-y="0.9375" label-x="2.1875" label-y="1.1875" name="DieTAA" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="39.0"/>
+      <transition delay="(1-#CCcells/10000000)*0.0226*#CCcells" label-x="-4.0" label-y="0.0" name="GrowCC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="49.55" y="61.0"/>
+      <transition delay="3" label-x="-4.0" label-y="0.0" name="GrowCC2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="41.55" y="61.0"/>
+      <transition delay="0.00004" delay-x="-2.5" delay-y="0.5" label-x="-3.5" label-y="-0.5" name="IntCC_AB" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="51.0"/>
+      <transition delay="0.00004" delay-x="-3.0" delay-y="-1.0" label-x="-0.5" label-y="-2.0" name="IntCC_TC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="17.55" y="61.0"/>
+      <transition delay="0.04620981" name="DieB" nservers-x="0.5" type="EXP" x="9.55" y="49.0"/>
+      <transition delay="0.05" label-x="-2.5" name="IntTH_B" nservers-x="0.5" type="EXP" x="69.55" y="41.0"/>
+      <transition delay="0.0035 * (#IntLeu2)/(#IntLeu2+400) * #Bcell" delay-x="-10.0" delay-y="1.5" label-x="2.0" label-y="-2.0" name="IntB_IL2" nservers-x="0.5" type="EXP" x="10.55" y="45.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="#f7ffc0" height="14.0" horiz-pos="4" locked="true" name="__textBox4" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="49.0" x="6.5" y="54.0">CCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#ffd8c0" height="10.5" horiz-pos="4" name="__textBox5" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="18.5" x="46.5" y="43.0">APCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#c0e7ff" height="21.8125" horiz-pos="4" name="__textBox6" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="15.1875" x="30.40625" y="27.09375">TAAsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f4f3ff" height="8.5" horiz-pos="2" name="__textBox7" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="23.0" x="6.5" y="34.0">ABsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f4fff3" height="8.5" horiz-pos="2" name="__textBox8" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="20.0" x="6.5" y="43.0">Bsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fefff3" height="12.5" horiz-pos="2" name="__textBox9" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="29.5" x="36.25" y="11.75">TCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fff3f3" height="13.0" horiz-pos="2" name="__textBox10" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="20.0" x="15.0" y="13.5">VCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f3fbff" height="17.5" horiz-pos="4" name="__textBox11" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="23.5" x="65.5" y="26.5">THsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fff8f3" height="13.5" horiz-pos="4" name="__textBox12" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="22.5" x="67.5" y="12.0625">IL2subnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f3fff6" height="17.5" horiz-pos="2" name="__textBox13" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="18.0" x="46.5" y="25.0">IL12subnet</text-box>
+      <transition delay="0.00001" label-x="-1.25" name="IntTAA_AB" nservers-x="0.5" type="EXP" x="33.55" y="43.0"/>
+      <transition delay="0.009 * (#IntLeu12)/(#IntLeu12+1000) * #THcells" delay-x="-8.5" delay-y="-1.5" label-y="-2.5" name="IntTH_IL12" nservers-x="0.5" type="EXP" x="64.55" y="28.0"/>
+      <transition delay="0.0005" name="IntTAA_APC" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="41.55" y="51.0"/>
+      <transition delay="0.0001" delay-x="0.8000000000000043" delay-y="-0.8500000000000085" label-x="-3.5" label-y="-0.5" name="IntAB_CC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="30.55" y="47.0"/>
+    </nodes>
+    <edges>
+      <arc head="DieVC" kind="INPUT" mult-k="1.40966796875" mult-x="-0.5003334603658551" mult-y="-1.0" tail="VC">
+        <point x="31.0" y="25.5"/>
+        <point x="25.0" y="25.5"/>
+      </arc>
+      <arc head="IntTC_IL2" kind="INPUT" mult-x="0.5" mult-y="-1.0" tail="TCcells"/>
+      <arc head="TCcells" kind="OUTPUT" mult="2" mult-k="1.6079101562499996" mult-x="0.813685954829019" mult-y="-0.5" tail="IntTC_IL2">
+        <point x="60.0" y="21.5"/>
+        <point x="53.0" y="21.5"/>
+      </arc>
+      <arc head="IntTC_IL2" kind="INPUT" mult-k="0.85537109375" mult-x="0.5692378786552794" mult-y="-0.7461662876467408" tail="IntLeu2">
+        <point x="67.5" y="19.0"/>
+        <point x="66.3362001844577" y="19.332514233012088"/>
+      </arc>
+      <arc head="IntLeu2" kind="OUTPUT" mult-k="1.4583007812499997" mult-x="-1.1873828125000045" mult-y="-0.5" tail="IntTC_IL2">
+        <point x="69.6875" y="20.0"/>
+        <point x="72.6875" y="20.0"/>
+      </arc>
+      <arc head="DieTC" kind="INPUT" mult-k="1.45068359375" mult-x="0.4375" mult-y="0.6535325665464953" tail="TCcells">
+        <point x="51.0" y="15.0"/>
+      </arc>
+      <arc head="ABcell" kind="OUTPUT" mult-k="2.36728515625" mult-x="-1.7800557286051912" mult-y="-0.5952062970535223" tail="IntAB_B">
+        <point x="22.124561920270416" y="41.0"/>
+        <point x="25.6875" y="41.0"/>
+      </arc>
+      <arc head="IntVC_AB" kind="INPUT" mult-k="0.8172851562500001" mult-x="-1.2357313130221286" mult-y="-0.5156272983047216" tail="ABcell">
+        <point x="28.1875" y="35.0"/>
+      </arc>
+      <arc head="IntVC_AB" kind="INPUT" mult-k="0.27783203125" mult-x="0.5" mult-y="-4.8828125E-4" tail="VC"/>
+      <arc head="DieAB" kind="INPUT" mult-k="1.18466796875" mult-x="-0.9084318541425276" mult-y="0.9921783421972279" tail="ABcell">
+        <point x="25.6875" y="36.0"/>
+      </arc>
+      <arc head="IntAB_B" kind="INPUT" mult-k="1.1706054687499998" mult-y="0.5" tail="Bcell">
+        <point x="22.5" y="45.5"/>
+        <point x="21.918793698349056" y="43.75638109504716"/>
+      </arc>
+      <arc head="Bcell" kind="OUTPUT" mult-k="0.30888671875000007" mult-x="-1.4998046874999993" mult-y="-0.25068359374999716" tail="IntAB_B"/>
+      <arc head="IntVC_TC" kind="INPUT" mult-k="0.44541015625" mult-x="0.6296528491568409" mult-y="0.9861198184338171" tail="VC">
+        <point x="38.5" y="27.5"/>
+      </arc>
+      <arc head="IntVC_TC" kind="INPUT" mult-k="0.6489257812500001" mult-x="-1.5" mult-y="-0.6883433259918306" tail="TCcells">
+        <point x="48.0" y="29.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="3" mult-k="1.1676757812499998" mult-x="-0.0625" mult-y="0.71875" tail="IntVC_TC">
+        <point x="43.5" y="40.0"/>
+        <point x="40.21387422986051" y="42.872885800214604"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="3" mult-k="1.53310546875" mult-x="0.05224609375" mult-y="-0.64111328125" tail="IntVC_AB">
+        <point x="35.0" y="40.5"/>
+        <point x="37.745234768600476" y="42.796935374103796"/>
+      </arc>
+      <arc head="IntTC_VC" kind="INPUT" mult-k="0.31650390625" tail="VC"/>
+      <arc head="APCcells" kind="OUTPUT" mult-k="0.38896484374999996" mult-x="0.9993164062500028" mult-y="-1.0" tail="Int_APC_TAA"/>
+      <arc head="Int_APC_TAA" kind="INPUT" tail="TAAcell"/>
+      <arc head="TCcells" kind="OUTPUT" mult-k="2.0823242187499997" mult-x="1.0001541940789451" mult-y="-1.5" tail="IntTC_VC">
+        <point x="42.5" y="20.5"/>
+        <point x="44.0" y="20.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult-k="1.12783203125" mult-x="0.05563429958476718" mult-y="0.9574894859616592" tail="Int_APC_TAA">
+        <point x="44.0" y="44.25"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="3" mult-k="0.79697265625" mult-x="-1.0" mult-y="-3.512683354500723E-5" tail="DieVC">
+        <point x="23.0" y="33.0"/>
+      </arc>
+      <arc head="DieAPC" kind="INPUT" mult-x="2.5" mult-y="0.5" tail="APCcells"/>
+      <arc head="IntTH_APC" kind="INPUT" mult-k="0.84287109375" mult-x="-0.5" mult-y="-0.5" tail="APCcells">
+        <point x="62.16357421875" y="46.079925537109375"/>
+      </arc>
+      <arc head="APCcells" kind="OUTPUT" mult-k="0.60517578125" mult-x="-1.677603893543541" mult-y="0.7962840148983616" tail="IntTH_APC">
+        <point x="61.16655327390871" y="47.28163192171566"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult-k="0.8020507812500001" mult-x="0.47266791260518204" mult-y="-1.0" tail="IntTH_APC">
+        <point x="75.1875" y="46.1875"/>
+      </arc>
+      <arc head="DieTH" kind="INPUT" mult-k="0.50009765625" mult-x="-3.9062499999431566E-4" mult-y="1.5" tail="THcells"/>
+      <arc head="IntLeu12" kind="OUTPUT" mult="10" mult-x="0.0" mult-y="0.5" tail="IntVC_TC"/>
+      <arc head="IntIL2_TH" kind="INPUT" mult-k="0.6428710937500001" mult-y="1.5000976562500021" tail="THcells"/>
+      <arc head="IntLeu2" kind="OUTPUT" mult-k="0.5999023437500001" tail="IntIL2_TH"/>
+      <arc head="THcells" kind="OUTPUT" mult-k="1.0194335937499996" mult-x="-1.5908461225223505" mult-y="0.09071681196878956" tail="IntIL2_TH">
+        <point x="74.1875" y="31.5"/>
+        <point x="74.1875" y="33.0"/>
+      </arc>
+      <arc head="IntTH_IL2" kind="INPUT" mult-k="0.6659179687500001" tail="THcells">
+        <point x="83.60906982421875" y="29.44989013671875"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="2" mult-x="-0.8801683929086863" mult-y="-0.03127178568617239" tail="IntTH_IL2">
+        <point x="78.6875" y="32.0"/>
+      </arc>
+      <arc head="IntTH_IL2" kind="INPUT" mult-k="0.5989257812500001" mult-x="1.5768554687499972" mult-y="-0.6154296875000007" tail="IntLeu2"/>
+      <arc head="IntLeu2" kind="OUTPUT" mult-k="1.1838867187500002" mult-x="1.063856790972963" mult-y="-0.19449029861006295" tail="IntTH_IL2">
+        <point x="80.3125" y="29.0625"/>
+      </arc>
+      <arc head="DieIL2" kind="INPUT" mult-k="1.10244140625" mult-x="-0.9998427690005371" mult-y="-0.4992358519092903" tail="IntLeu2">
+        <point x="75.0040091801539" y="22.99896300755536"/>
+      </arc>
+      <arc broken="true" head="IntLeu12" kind="OUTPUT" mult="10" mult-k="0.4425021201372146" mult-x="-0.2132690705013296" mult-y="-0.5" tail="DieVC">
+        <point x="18.0" y="23.0"/>
+        <point x="57.5" y="32.0"/>
+      </arc>
+      <arc broken="true" head="IntLeu12" kind="OUTPUT" mult="10" mult-k="0.2001352071762085" mult-x="0.0" mult-y="2.051299864574517" tail="IntVC_AB">
+        <point x="32.0" y="37.0"/>
+        <point x="61.0" y="37.5"/>
+      </arc>
+      <arc head="IntIL12_TH" kind="INPUT" mult-x="-0.5" mult-y="0.5" tail="IntLeu12"/>
+      <arc head="IntIL12_TH" kind="INPUT" mult-k="0.75380859375" mult-x="0.25" mult-y="0.8125" tail="THcells">
+        <point x="68.57258911132813" y="34.7013671875"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult-x="2.1875" mult-y="-0.6875" tail="IntIL12_TH">
+        <point x="71.875" y="34.0625"/>
+      </arc>
+      <arc head="DieIL12" kind="INPUT" mult-x="-1.3125" mult-y="0.0625" tail="IntLeu12"/>
+      <arc head="IntIL12_TC" kind="INPUT" mult-k="0.5833007812500001" mult-y="0.4998046874999993" tail="IntLeu12"/>
+      <arc head="IntIL12_TC" kind="INPUT" mult-k="0.50009765625" mult-x="-0.09814453125" mult-y="1.0822265625000007" tail="TCcells"/>
+      <arc head="TCcells" kind="OUTPUT" mult-k="1.89755859375" mult-x="1.5889291659594988" mult-y="-0.06226500946300817" tail="IntIL12_TC">
+        <point x="53.20994361167645" y="23.23480264086757"/>
+        <point x="53.0" y="22.5"/>
+        <point x="52.14568992930741" y="21.96605620581713"/>
+      </arc>
+      <arc head="IntIL2_TC" kind="INPUT" mult-k="0.8000976562500001" mult-x="-1.0603999138034226" mult-y="-1.0462728342438012" tail="IntLeu2">
+        <point x="75.0" y="17.5"/>
+      </arc>
+      <arc broken="true" head="IntIL2_TC" kind="INPUT" mult-k="0.5706185400485994" mult-x="-0.875" mult-y="-0.1875" tail="TCcells">
+        <point x="46.3125" y="12.75"/>
+        <point x="71.5" y="10.4375"/>
+      </arc>
+      <arc broken="true" head="TCcells" kind="OUTPUT" mult-k="0.5270381361246108" mult-x="1.3580786741592874" mult-y="0.8558586381187112" tail="IntIL2_TC">
+        <point x="75.0" y="9.5"/>
+        <point x="38.5" y="10.0"/>
+      </arc>
+      <arc head="IntIL2_B" kind="INPUT" mult-k="0.79287109375" mult-x="-1.9993930730096565" mult-y="0.5" tail="IntLeu2">
+        <point x="85.0" y="19.0"/>
+      </arc>
+      <arc broken="true" head="IntIL2_B" kind="INPUT" mult-k="0.5270634740591049" mult-x="-0.014416149039881532" mult-y="0.7122262644228741" tail="Bcell">
+        <point x="23.5" y="49.5"/>
+        <point x="89.0" y="22.5"/>
+      </arc>
+      <arc broken="true" head="Bcell" kind="OUTPUT" mult-k="0.38580425083637243" mult-x="1.1777948234572762" mult-y="-0.4327307899468842" tail="IntIL2_B">
+        <point x="90.0" y="19.0"/>
+        <point x="22.0" y="48.5"/>
+      </arc>
+      <arc head="DieTAA" kind="INPUT" mult-k="0.7545898437499999" mult-x="0.5" mult-y="0.48152465820312784" tail="TAAcell"/>
+      <arc head="DieCC" kind="INPUT" mult-k="0.35244140625" tail="CCcells"/>
+      <arc head="CCcells" kind="OUTPUT" mult="2" mult-k="0.9122070312500001" mult-x="-3.5" mult-y="0.5544718386460659" tail="GrowCC">
+        <point x="50.0" y="58.0"/>
+      </arc>
+      <arc head="GrowCC" kind="INPUT" mult-k="1.5149414062500002" mult-x="-1.6947473681714698" mult-y="-0.5" tail="CCcells">
+        <point x="35.5" y="56.0"/>
+        <point x="51.5" y="56.0"/>
+        <point x="51.5" y="60.0"/>
+      </arc>
+      <arc head="CCcells" kind="OUTPUT" mult-k="0.8459960937500001" mult-x="-1.4929131544414034" mult-y="0.8899172195090088" tail="GrowCC2">
+        <point x="42.0" y="58.0"/>
+        <point x="32.0" y="58.0"/>
+      </arc>
+      <arc head="IntCC_AB" kind="INPUT" mult-x="1.5" tail="ABcell"/>
+      <arc head="IntCC_AB" kind="INPUT" mult-x="-1.0" mult-y="0.0" tail="CCcells"/>
+      <arc head="IntCC_TC" kind="INPUT" mult-x="1.5" mult-y="0.0" tail="CCcells"/>
+      <arc broken="true" head="TCcells" kind="OUTPUT" mult-k="0.3249096810817719" mult-x="-0.5002216476874572" mult-y="0.9997783523125463" tail="IntCC_TC">
+        <point x="18.0" y="64.5"/>
+        <point x="41.5" y="24.0"/>
+      </arc>
+      <arc broken="true" head="IntCC_TC" kind="INPUT" mult-k="0.49812751114368437" mult-x="-1.6569202467068251" mult-y="-0.07446380263453989" tail="TCcells">
+        <point x="39.5" y="27.0"/>
+        <point x="11.0" y="63.0"/>
+      </arc>
+      <arc head="DieB" kind="INPUT" mult-k="0.39990234375" mult-x="0.0" tail="Bcell"/>
+      <arc head="IntTH_B" kind="INPUT" mult-k="0.98798828125" mult-x="-0.8773237435140402" mult-y="-0.824734895247353" tail="THcells">
+        <point x="74.0" y="42.0"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult-k="0.44462890624999996" mult-x="-1.09375" mult-y="-0.5" tail="IntTH_B"/>
+      <arc broken="true" head="Bcell" kind="OUTPUT" mult-x="0.0705737473029302" mult-y="1.214713126348535" tail="IntTH_B">
+        <point x="67.0" y="43.5"/>
+        <point x="14.5" y="44.0"/>
+      </arc>
+      <arc head="IntB_IL2" kind="INPUT" mult-k="0.73447265625" mult-x="-1.2344169816180823" mult-y="-0.17208490809041166" tail="Bcell">
+        <point x="19.0" y="44.0"/>
+      </arc>
+      <arc broken="true" head="IntB_IL2" kind="INPUT" mult-x="-1.6014495857567592" mult-y="-0.03381652858558937" tail="IntLeu2">
+        <point x="82.0" y="25.0"/>
+        <point x="11.5" y="41.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="3" mult-k="0.7059570312500001" mult-x="0.7344726562499986" mult-y="0.16294555664062216" tail="DieCC"/>
+      <arc head="TAAcell" kind="OUTPUT" mult="3" mult-k="0.8583007812500001" mult-x="0.20427139359681235" mult-y="-0.4878026228386858" tail="IntCC_TC">
+        <point x="23.5" y="66.0"/>
+        <point x="33.5" y="66.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="3" mult-x="0.6048468530222451" mult-y="0.04147232770792897" tail="IntCC_AB">
+        <point x="31.5" y="52.0"/>
+      </arc>
+      <arc head="IntTAA_AB" kind="INPUT" mult-x="-0.0625" mult-y="-0.5625" tail="TAAcell"/>
+      <arc head="IntTAA_AB" kind="INPUT" mult-k="0.6516601562500002" mult-x="1.625" mult-y="0.0" tail="ABcell">
+        <point x="31.550048828125" y="45.21258544921875"/>
+      </arc>
+      <arc head="TCcells" kind="OUTPUT" mult-k="0.8303710937500001" tail="IntVC_TC">
+        <point x="46.0" y="25.5"/>
+      </arc>
+      <arc head="Bcell" kind="OUTPUT" mult="2" mult-x="0.0" mult-y="0.5" tail="IntB_IL2"/>
+      <arc head="VC" kind="OUTPUT" mult-k="0.6577148437500001" tail="IntTC_VC">
+        <point x="34.658268374211914" y="21.257392972047093"/>
+        <point x="33.5" y="21.0"/>
+      </arc>
+      <arc head="IntLeu12" kind="OUTPUT" tail="IntTH_IL12"/>
+      <arc head="IntTH_IL12" kind="INPUT" tail="THcells"/>
+      <arc head="THcells" kind="OUTPUT" mult="2" tail="IntTH_IL12">
+        <point x="72.0" y="31.0"/>
+      </arc>
+      <arc head="IntTH_IL12" kind="INPUT" tail="IntLeu12">
+        <point x="61.0" y="29.5"/>
+      </arc>
+      <arc head="ABcell" kind="OUTPUT" tail="IntCC_AB">
+        <point x="27.0" y="46.5"/>
+      </arc>
+      <arc head="IntTAA_APC" kind="INPUT" tail="TAAcell"/>
+      <arc head="IntTAA_APC" kind="INPUT" tail="APCcells"/>
+      <arc head="APCcells" kind="OUTPUT" tail="IntTAA_APC"/>
+      <arc head="IntAB_CC" kind="INPUT" tail="ABcell"/>
+      <arc head="CCcells" kind="OUTPUT" tail="IntAB_CC"/>
+      <arc head="IntAB_CC" kind="INPUT" tail="CCcells">
+        <point x="30.5" y="53.5"/>
+      </arc>
+      <arc broken="true" head="IntLeu2" kind="OUTPUT" mult-k="0.971295166015625" tail="IntB_IL2"/>
+    </edges>
+  </gspn>
+  <gspn name="copy of CarcMamm" show-fluid-cmd="false">
+    <nodes>
+      <color-class definition="agent vc{1..3}" name="VC" x="2.875" y="74.0"/>
+      <color-class definition="agent w{1..3}" name="IL2" x="13.0625" y="69.0"/>
+      <color-class definition="agent z{1..3}" name="IL12" x="17.75" y="73.0"/>
+      <color-class definition="agent y{1..3}" name="TAA" x="1.4375" y="70.0"/>
+      <color-class definition="agent ab{1..3}" name="AB" x="2.0" y="72.0"/>
+      <color-class definition="agent apc{1..3}" name="APC" x="22.0625" y="71.125"/>
+      <color-class definition="agent th{1..3}" name="TH" x="31.0625" y="73.125"/>
+      <color-class definition="agent b{1..3}" name="B" x="31.6875" y="69.0"/>
+      <color-class definition="agent cc{1..50}" name="CC" x="42.875" y="73.0"/>
+      <color-class definition="agent tc{1..3}" name="TC" x="41.0625" y="71.125"/>
+      <place domain="VC" label-x="-3.5" label-y="0.0" name="Vax" x="31.0" y="22.0"/>
+      <transition delay="unosuTinj" delay-x="2.0" delay-y="-1.5" label-x="2.0" label-y="0.0" name="Inj" nservers-x="0.5" nservers-y="1.0" rotation="4.71238898038469" type="EXP" x="26.55" y="17.0"/>
+      <constant consttype="REAL" name="unosuTinj" value="1.0" x="0.8125" y="19.0"/>
+      <color-var domain="VC" name="v1" x="3.125" y="80.0"/>
+      <place domain="TC" label-x="4.5" label-y="-1.5" name="TCcells" x="50.0" y="19.0"/>
+      <constant consttype="REAL" name="alpha19" value="1.0" x="0.9" y="20.375"/>
+      <constant consttype="REAL" name="gamma91" value="0.2" x="0.9" y="38.9375"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="__textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="1.0625">$\frac{dVC}{dt} = Kin(t,q) - \mu_1 VC - (\alpha_{19}TC+\alpha_{17}AB)VC$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="3.0625">$\frac{dTC}{dt} = \gamma_{91} VC - \alpha_{96}(\frac{IL2}{IL2+s_{90}})TC - \mu_9 TC$</text-box>
+      <transition delay="mu1 " delay-x="-2.5" delay-y="-1.0" label-x="-2.5" label-y="-2.0" name="DieVC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="22.55" y="22.0"/>
+      <constant consttype="REAL" name="mu1" value="1.0" x="9.5" y="18.0"/>
+      <transition delay="alpha96" delay-x="-2.5" delay-y="-1.0" label-x="-3.0" label-y="-2.0" name="IntTC_IL2" nservers-x="0.5" type="EXP" x="63.55" y="19.0"/>
+      <color-var domain="TC" name="xtc1" x="16.125" y="75.125"/>
+      <color-var domain="TC" name="xtc2" x="16.25" y="76.125"/>
+      <place domain="IL2" label-x="4.5" label-y="-1.5" name="IntLeu2" x="74.0" y="18.0"/>
+      <color-var domain="IL2" name="yil2" x="30.125" y="75.125"/>
+      <constant consttype="REAL" name="alpha96" value="0.05" x="0.9" y="23.75"/>
+      <place domain="AB" label-x="2.125" label-y="1.5625" name="ABcell" x="27.0" y="38.0"/>
+      <transition delay="alpha17 " delay-x="-1.5" delay-y="1.5" label-x="-3.0" label-y="-2.0" name="IntVC_AB" nservers-x="0.5" rotation="3.141592653589793" type="EXP" x="31.55" y="31.0"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="7.0625">$\frac{dTAA}{dt} = \gamma_{21}(\alpha_{19}TC+\alpha_{17}AB+\mu_1)VC+\gamma_{28}(\alpha_{88}+\alpha_{89}TC+\alpha_{87}AB)CC - $\\ \hspace{14mm}$-(\mu_2 + \alpha_{20}APC+\alpha_{27}AB)TAA$</text-box>
+      <transition delay="mu9" label-x="-2.5" label-y="-1.0" name="DieTC" nservers-x="0.5" type="EXP" x="57.55" y="14.0"/>
+      <constant consttype="REAL" name="mu7" value="1.0" x="9.5" y="24.0"/>
+      <place domain="B" label-y="2.0" name="Bcell" x="19.0" y="47.0"/>
+      <transition delay="gamma73" delay-x="-1.0" delay-y="-2.0" label-x="2.8125" label-y="1.5" name="IntAB_B" nservers-x="0.5" type="EXP" x="20.55" y="40.0"/>
+      <transition delay="mu7" delay-x="-0.5" delay-y="1.5" label-x="-2.1875" label-y="-0.5" name="DieAB" nservers-x="0.5" type="EXP" x="20.7375" y="35.0"/>
+      <color-var domain="B" name="xb1" x="36.625" y="75.125"/>
+      <color-var domain="AB" name="yab1" x="10.0" y="75.125"/>
+      <color-var domain="B" name="xb2" x="36.625" y="76.125"/>
+      <constant consttype="REAL" name="mu9" value="1.0" x="9.5" y="25.0"/>
+      <constant consttype="REAL" name="gamma73" value="3" x="0.9" y="39.8125"/>
+      <transition delay="alpha19 " delay-x="-2.5" delay-y="0.5" label-x="0.5" label-y="2.0" name="IntVC_TC" nservers-x="0.5" rotation="-0.0" type="EXP" x="42.55" y="31.0"/>
+      <place domain="TAA" label-x="-3.625" label-y="0.125" name="TAAcell" x="38.0" y="45.1875"/>
+      <constant consttype="REAL" name="alpha17" value="0.001" x="0.9" y="21.4375"/>
+      <transition delay="gamma91" delay-y="0.5" label-x="-0.5625" label-y="2.0" name="IntTC_VC" nservers-x="0.5" type="EXP" x="38.55" y="21.0"/>
+      <color-var domain="TAA" name="xtaa1" x="4.5625" y="76.125"/>
+      <place domain="CC" label-x="-3.5" label-y="0.0" name="CCcells" x="27.0" y="55.0"/>
+      <place domain="APC" label-x="2.5" label-y="-2.0" name="APCcells" x="56.0" y="45.1875"/>
+      <place domain="TH" label-x="-2.5" label-y="1.4375" name="THcells" x="74.1875" y="35.0"/>
+      <place domain="IL12" label-x="-0.125" label-y="-1.8125" name="IntLeu12" x="53.0" y="31.0"/>
+      <transition delay="gamma02" label-x="2.5" label-y="-2.0" name="Int_APC_TAA" nservers-x="0.5" type="EXP" x="47.55" y="45.1875"/>
+      <transition delay="gamma40" delay-y="-1.5" label-x="1.0625" label-y="2.1875" name="IntTH_APC" nservers-x="0.5" type="EXP" x="65.55" y="45.0"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="3.0" horiz-pos="2" name="__textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="18.5" x="0.75" y="11.5">1. VC; 2. TAA; 3. B; 4. TH; 5. IL12; 6. IL2, 7. AB; 8.CC; 9. TC; 10.APC</text-box>
+      <color-var domain="APC" name="yapc1" x="15.9375" y="77.4375"/>
+      <color-var domain="TH" name="xth1" x="23.125" y="75.125"/>
+      <color-var domain="IL12" name="xil12" x="30.0625" y="76.125"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="4.25" horiz-pos="2" name="__textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="12.25" x="0.875" y="13.875">$\alpha_{i,j}$ Interazione tra i e j\\ $\gamma_{i,j}$ rilascio di i dovuto a j\\ $\mu_i$ morte di i</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="5.0625">$\frac{dAB}{dt} = \gamma_{73} B - [\alpha_{78}CC+\alpha_{71}VC+\alpha_{72}TAA] AB - \mu_7 AB$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="3.0625">$\frac{dTH}{dt} = \gamma_{40}APC + \alpha_{46}(\frac{IL2}{IL2+s_{1}})TH  + \alpha_{45}(\frac{IL12}{IL12+s_{2}})TH - \mu_4 TH$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="1.0625">$\frac{dB}{dt} = \gamma_{34} TH + \alpha_{36}(\frac{IL2}{IL2+s_{3}})B - \mu_3 B$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="5.0625">$\frac{dIL2}{dt} = \gamma_{64}TH - (\alpha_{63}B+\alpha_{69}TC)IL2 - \mu_6 IL2$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="7.0625">$\frac{dIL12}{dt} = \gamma_{51}(\alpha_{19}TC+\alpha_{17}AB+\mu_1)VC - (\alpha_{54}TH+\alpha_{59}TC+\mu_5)IL12$</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="10.3125" horiz-pos="4" locked="true" name="__textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="63.1875" x="1.15625" y="0.40625">ODE</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="1.625" horiz-pos="2" name="copy_copy_copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="12.25" x="50.9375" y="1.0625">$\frac{dAPC}{dt} = \gamma_{02} TAA -  \mu_0 APC$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="9.0625">$\frac{dCC}{dt} = [(1-\frac{CC}{c_{max}})k-\alpha_{88}]CC - (\alpha_{89}TC+\alpha_{87}AB)CC + p$</text-box>
+      <constant consttype="REAL" name="gamma02" value="0.07" x="0.9" y="41.0"/>
+      <transition delay="mu0" label-x="-4.0" label-y="0.0" name="DieAPC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="50.0"/>
+      <constant consttype="REAL" name="mu0" value="0.046" x="9.5" y="17.0"/>
+      <constant consttype="REAL" name="alpha71" value="0.001" x="0.9" y="22.625"/>
+      <constant consttype="REAL" name="gamma40" value="0.15" x="0.9" y="42.3125"/>
+      <transition delay="mu4" delay-y="-1.0" label-y="3.0" name="DieTH" nservers-x="0.5" type="EXP" x="78.7375" y="35.0"/>
+      <constant consttype="REAL" name="mu4" value="0.046" x="9.5" y="21.0"/>
+      <transition delay="gamma64" delay-x="1.0" delay-y="-0.5" label-x="-3.0" name="IntIL2_TH" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="27.0"/>
+      <color-var domain="TAA" name="xtaa" x="5.0" y="77.125"/>
+      <constant consttype="INTEGER" name="gamma21" value="3" x="0.9" y="47.0"/>
+      <constant consttype="INTEGER" name="gamma51" value="10" x="0.9" y="47.9375"/>
+      <constant consttype="REAL" name="gamma64" value="5.0" x="0.9" y="43.6875"/>
+      <transition delay="alpha46" delay-x="1.5" delay-y="0.0" label-x="2.0" name="IntTH_IL2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.7375" y="28.0"/>
+      <constant consttype="REAL" name="alpha46" value="0.009" x="0.9" y="27.375"/>
+      <color-var domain="TH" name="xth2" x="23.1875" y="76.125"/>
+      <transition delay="mu6" delay-x="0.625" delay-y="0.5625" label-x="1.0" label-y="2.0" name="DieIL2" nservers-x="0.5" type="EXP" x="68.55" y="22.0"/>
+      <constant consttype="REAL" name="mu6" value="0.23" x="9.5" y="23.0"/>
+      <transition delay="alpha54" label-x="1.0" name="IntIL12_TH" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="64.55" y="33.0"/>
+      <constant consttype="INTEGER" name="Kin" value="50" x="0.9" y="49.0"/>
+      <constant consttype="REAL" name="alpha54" value="0.0009" x="0.9" y="28.875"/>
+      <transition delay="alpha59" delay-x="-2.5" delay-y="0.0" label-x="2.5" label-y="-2.0" name="IntIL12_TC" nservers-x="0.5" type="EXP" x="53.55" y="25.0"/>
+      <constant consttype="REAL" name="alpha59" value="0.001" x="0.9" y="30.0625"/>
+      <transition delay="mu5" label-x="3.1875" label-y="0.125" name="DieIL12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="37.0"/>
+      <constant consttype="REAL" name="mu5" value="0.077" x="9.5" y="22.1875"/>
+      <transition delay="alpha69" label-x="4.0" label-y="-0.5" name="IntIL2_TC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="13.0"/>
+      <constant consttype="REAL" name="alpha69" value="0.0001" x="0.9" y="24.8125"/>
+      <transition delay="alpha63" delay-x="-2.0" label-x="-4.0" label-y="0.0" name="IntIL2_B" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="85.55" y="14.0"/>
+      <constant consttype="REAL" name="alpha63" value="0.0001" x="0.9" y="32.0"/>
+      <transition delay="alpha88" delay-x="-2.75" delay-y="1.3125" label-x="-3.0" label-y="0.0" name="DieCC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="61.0"/>
+      <constant consttype="REAL" name="alpha88" value="0.0000001176" x="0.9" y="26.0"/>
+      <transition delay="mu2" delay-x="-1.625" delay-y="0.9375" label-x="2.1875" label-y="1.1875" name="DieTAA" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="36.0"/>
+      <constant consttype="REAL" name="mu2" value="0.077" x="9.5" y="19.0"/>
+      <color-var domain="CC" name="xc1" x="42.1875" y="75.1875"/>
+      <color-var domain="CC" name="xc2" x="42.25" y="76.25"/>
+      <transition delay="f_CC" label-x="-4.0" label-y="0.0" name="GrowCC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="49.55" y="61.0"/>
+      <constant consttype="INTEGER" name="k" value="10" x="0.6875" y="50.9375"/>
+      <constant consttype="REAL" name="f_CC" value="1.0" x="0.3125" y="37.375"/>
+      <transition delay="p" label-x="-4.0" label-y="0.0" name="GrowCC2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="41.55" y="61.0"/>
+      <constant consttype="REAL" name="p" value="0.0" x="0.75" y="36.0"/>
+      <transition delay="alpha87 " delay-x="-2.5" delay-y="0.5" label-x="-3.5" label-y="-0.5" name="IntCC_AB" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="52.0"/>
+      <constant consttype="REAL" name="alpha87" value="0.0" x="0.9" y="33.0"/>
+      <transition delay="alpha89" delay-x="-3.0" delay-y="-1.0" label-x="-0.5" label-y="-2.0" name="IntCC_TC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="17.55" y="61.0"/>
+      <constant consttype="REAL" name="alpha89" value="0.0" x="0.9" y="34.0"/>
+      <transition delay="mu3" name="DieB" nservers-x="0.5" type="EXP" x="9.55" y="49.0"/>
+      <constant consttype="REAL" name="mu3" value="0.0" x="9.5" y="20.0"/>
+      <transition delay="gamma34" label-x="-2.5" name="IntTH_B" nservers-x="0.5" type="EXP" x="69.55" y="41.0"/>
+      <constant consttype="REAL" name="gamma34" value="0.0" x="0.75" y="45.0"/>
+      <transition delay="alpha36" label-x="2.0" label-y="-2.0" name="IntB_IL2" nservers-x="0.5" type="EXP" x="9.55" y="45.0"/>
+      <constant consttype="REAL" name="alpha36" value="0.0" x="0.9" y="35.0"/>
+      <constant consttype="INTEGER" name="gamma28" value="3" x="0.25" y="46.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="#f7ffc0" height="14.0" horiz-pos="4" locked="true" name="__textBox4" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="49.0" x="6.5" y="54.0">CCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#ffd8c0" height="10.5" horiz-pos="4" name="__textBox5" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="18.5" x="46.5" y="43.0">APCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#c0e7ff" height="21.8125" horiz-pos="4" name="__textBox6" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="15.1875" x="30.40625" y="27.09375">TAAsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f4f3ff" height="8.5" horiz-pos="2" name="__textBox7" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="23.0" x="6.5" y="34.0">ABsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f4fff3" height="8.5" horiz-pos="2" name="__textBox8" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="20.0" x="6.5" y="43.0">Bsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fefff3" height="12.5" horiz-pos="2" name="__textBox9" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="29.5" x="37.5" y="12.0">TCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fff3f3" height="13.0" horiz-pos="2" name="__textBox10" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="20.0" x="15.0" y="13.5">VCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f3fbff" height="17.5" horiz-pos="4" name="__textBox11" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="23.5" x="65.5" y="26.5">THsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fff8f3" height="13.5" horiz-pos="4" name="__textBox12" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="22.5" x="67.5" y="12.0625">IL2subnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f3fff6" height="17.5" horiz-pos="2" name="__textBox13" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="18.0" x="46.5" y="25.0">IL12subnet</text-box>
+      <transition delay="alpha27" label-x="-1.25" name="IntTAA_AB" nservers-x="0.5" type="EXP" x="31.8" y="43.1875"/>
+      <constant consttype="REAL" name="alpha27" value="0.00001" x="0.8125" y="31.0"/>
+      <color-class definition="agent env{1..1}" name="ENV" x="54.125" y="71.0"/>
+      <color-var domain="ENV" name="xenv" x="53.9375" y="73.0"/>
+      <place domain="ENV" marking="&lt;env1&gt;" name="environment" x="66.0" y="66.0"/>
+      <constant consttype="REAL" name="R" value="0.0" x="33.125" y="55.0"/>
+    </nodes>
+    <edges>
+      <arc head="Vax" kind="OUTPUT" mult="&lt;v1&gt;" mult-k="0.99384765625" mult-x="-3.0" mult-y="-3.906250000014211E-4" tail="Inj">
+        <point x="29.347265625" y="19.68408203125"/>
+      </arc>
+      <arc head="DieVC" kind="INPUT" mult="&lt;v1&gt;" mult-k="1.40966796875" mult-x="-0.5003334603658551" mult-y="-1.0" tail="Vax">
+        <point x="31.0" y="25.5"/>
+        <point x="25.0" y="25.5"/>
+      </arc>
+      <arc head="IntTC_IL2" kind="INPUT" mult="&lt;xtc1&gt;" mult-x="0.5" mult-y="-1.0" tail="TCcells"/>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;+&lt;xtc2&gt;" mult-k="1.6079101562499996" mult-x="1.8620219515098597" mult-y="-0.9181181401531688" tail="IntTC_IL2">
+        <point x="60.0" y="21.5"/>
+        <point x="53.0" y="21.5"/>
+      </arc>
+      <arc head="IntTC_IL2" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.85537109375" mult-x="0.5692378786552794" mult-y="-0.7461662876467408" tail="IntLeu2">
+        <point x="67.5" y="19.0"/>
+      </arc>
+      <arc head="IntLeu2" kind="OUTPUT" mult="&lt;yil2&gt;" mult-k="1.4583007812499997" mult-x="-1.1873828125000045" mult-y="-0.5" tail="IntTC_IL2">
+        <point x="69.6875" y="20.0"/>
+        <point x="72.6875" y="20.0"/>
+      </arc>
+      <arc head="DieTC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="1.45068359375" mult-x="0.4375" mult-y="0.6535325665464953" tail="TCcells">
+        <point x="51.0" y="15.0"/>
+      </arc>
+      <arc head="ABcell" kind="OUTPUT" mult="&lt;yab1&gt;" mult-k="1.36728515625" mult-x="-1.7800557286051912" mult-y="-0.5952062970535223" tail="IntAB_B">
+        <point x="25.6875" y="41.0"/>
+      </arc>
+      <arc head="IntVC_AB" kind="INPUT" mult="&lt;yab1&gt;" mult-k="0.8172851562500001" mult-x="-1.2357313130221286" mult-y="-0.5156272983047216" tail="ABcell">
+        <point x="28.1875" y="35.0"/>
+      </arc>
+      <arc head="IntVC_AB" kind="INPUT" mult="&lt;v1&gt;" mult-k="0.27783203125" mult-y="-4.8828125E-4" tail="Vax"/>
+      <arc head="DieAB" kind="INPUT" mult="&lt;yab1&gt;" mult-k="1.18466796875" mult-x="-0.9084318541425276" mult-y="0.9921783421972279" tail="ABcell">
+        <point x="25.6875" y="36.0"/>
+      </arc>
+      <arc head="IntAB_B" kind="INPUT" mult="&lt;xb1&gt;" mult-k="1.0348632812499998" mult-y="0.5" tail="Bcell">
+        <point x="22.5" y="45.5"/>
+      </arc>
+      <arc head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt;" mult-k="0.30888671875000007" mult-x="-1.4998046874999993" mult-y="-0.25068359374999716" tail="IntAB_B"/>
+      <arc head="IntVC_TC" kind="INPUT" mult="&lt;v1&gt;" mult-k="0.44541015625" mult-x="0.6296528491568409" mult-y="0.9861198184338171" tail="Vax">
+        <point x="38.5" y="27.5"/>
+      </arc>
+      <arc head="IntVC_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.6489257812500001" mult-x="-1.5" mult-y="-0.6883433259918306" tail="TCcells">
+        <point x="48.0" y="29.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="1.1676757812499998" mult-x="-0.0625" mult-y="0.71875" tail="IntVC_TC">
+        <point x="43.0625" y="39.9375"/>
+        <point x="40.21387422986051" y="42.872885800214604"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult=" &lt;xtaa&gt;" mult-k="1.53310546875" mult-x="0.05224609375" mult-y="-0.64111328125" tail="IntVC_AB">
+        <point x="35.0" y="40.5"/>
+        <point x="37.745234768600476" y="42.796935374103796"/>
+      </arc>
+      <arc head="IntTC_VC" kind="INPUT" mult="&lt;v1&gt;" mult-k="0.31650390625" tail="Vax"/>
+      <arc head="APCcells" kind="OUTPUT" mult="&lt;yapc1&gt;" mult-k="0.38896484374999996" mult-x="0.9993164062500028" mult-y="-1.0" tail="Int_APC_TAA"/>
+      <arc head="Int_APC_TAA" kind="INPUT" mult="&lt;xtaa1&gt;" tail="TAAcell"/>
+      <arc head="TCcells" kind="OUTPUT" mult="" mult-k="2.0823242187499997" mult-x="1.0001541940789451" mult-y="-1.5" tail="IntTC_VC">
+        <point x="42.5" y="20.5"/>
+        <point x="44.0" y="20.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa1&gt;" mult-k="1.12783203125" mult-x="0.05563429958476718" mult-y="0.9574894859616592" tail="Int_APC_TAA">
+        <point x="44.0" y="44.25"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="0.79697265625" mult-x="-2.5" mult-y="0.9816607675676039" tail="DieVC">
+        <point x="23.0" y="33.0"/>
+      </arc>
+      <arc head="DieAPC" kind="INPUT" mult="&lt;yapc1&gt;" mult-x="2.5" mult-y="0.5" tail="APCcells"/>
+      <arc head="IntTH_APC" kind="INPUT" mult="&lt;yapc1&gt;" mult-x="-0.5" mult-y="-0.5" tail="APCcells"/>
+      <arc head="APCcells" kind="OUTPUT" mult="&lt;yapc1&gt;" mult-k="0.60517578125" mult-x="-1.677603893543541" mult-y="0.7962840148983616" tail="IntTH_APC">
+        <point x="61.16655327390871" y="47.28163192171566"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-k="0.8020507812500001" mult-x="0.47266791260518204" mult-y="-1.0" tail="IntTH_APC">
+        <point x="75.1875" y="46.1875"/>
+      </arc>
+      <arc head="DieTH" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.50009765625" mult-x="-3.9062499999431566E-4" mult-y="1.5" tail="THcells"/>
+      <arc head="IntLeu12" kind="OUTPUT" mult="&lt;xil12&gt;" mult-x="0.0" mult-y="0.5" tail="IntVC_TC"/>
+      <arc head="IntIL2_TH" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.6428710937500001" mult-y="1.5000976562500021" tail="THcells"/>
+      <arc head="IntLeu2" kind="OUTPUT" mult="&lt;yil2&gt;" mult-k="0.5999023437500001" tail="IntIL2_TH"/>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-k="1.0194335937499996" mult-x="-1.5908461225223505" mult-y="0.09071681196878956" tail="IntIL2_TH">
+        <point x="74.1875" y="31.5"/>
+        <point x="74.1875" y="33.0"/>
+      </arc>
+      <arc head="IntTH_IL2" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.6231445312500001" tail="THcells"/>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;+&lt;xth2&gt;" mult-x="-2.6926683929086863" mult-y="-0.03127178568617239" tail="IntTH_IL2">
+        <point x="78.6875" y="32.0"/>
+      </arc>
+      <arc head="IntTH_IL2" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.5989257812500001" mult-x="1.5768554687499972" mult-y="-0.6154296875000007" tail="IntLeu2"/>
+      <arc head="IntLeu2" kind="OUTPUT" mult="&lt;yil2&gt;" mult-k="1.1838867187500002" mult-x="1.063856790972963" mult-y="-0.19449029861006295" tail="IntTH_IL2">
+        <point x="80.3125" y="29.0625"/>
+      </arc>
+      <arc head="DieIL2" kind="INPUT" mult="&lt;yil2&gt;" mult-k="1.10244140625" mult-x="-0.9998427690005371" mult-y="-0.4992358519092903" tail="IntLeu2">
+        <point x="75.0040091801539" y="22.99896300755536"/>
+      </arc>
+      <arc broken="true" head="IntLeu12" kind="OUTPUT" mult="&lt;xil12&gt;" mult-k="0.4425021201372146" mult-x="-1.999578903841261" mult-y="1.5" tail="DieVC">
+        <point x="17.5" y="23.0"/>
+        <point x="57.0" y="32.0"/>
+      </arc>
+      <arc broken="true" head="IntLeu12" kind="OUTPUT" mult="&lt;xil12&gt;" mult-k="0.2001352071762085" mult-x="0.0" mult-y="2.051299864574517" tail="IntVC_AB">
+        <point x="32.0" y="37.0"/>
+        <point x="61.0" y="37.5"/>
+      </arc>
+      <arc head="IntIL12_TH" kind="INPUT" mult="&lt;xil12&gt;" mult-x="-0.5" mult-y="0.5" tail="IntLeu12"/>
+      <arc head="IntIL12_TH" kind="INPUT" mult="&lt;xth1&gt; + &lt;xth2&gt;" mult-k="0.75380859375" mult-x="0.25" mult-y="0.8125" tail="THcells">
+        <point x="68.57258911132813" y="34.7013671875"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-x="2.1875" mult-y="-0.6875" tail="IntIL12_TH">
+        <point x="71.875" y="34.0625"/>
+      </arc>
+      <arc head="DieIL12" kind="INPUT" mult="&lt;xil12&gt;" mult-x="-1.3125" mult-y="0.0625" tail="IntLeu12"/>
+      <arc head="IntIL12_TC" kind="INPUT" mult="&lt;xil12&gt;" mult-k="0.5833007812500001" mult-y="0.4998046874999993" tail="IntLeu12"/>
+      <arc head="IntIL12_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.50009765625" mult-x="-0.09814453125" mult-y="1.0822265625000007" tail="TCcells"/>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="1.1473632812499996" mult-x="1.5889291659594988" mult-y="-0.06226500946300817" tail="IntIL12_TC">
+        <point x="53.0" y="22.5"/>
+        <point x="52.14568992930741" y="21.96605620581713"/>
+      </arc>
+      <arc head="Inj" kind="INPUT" mult="&lt;xenv&gt;" mult-k="3.202246093750001" tail="environment">
+        <point x="88.5" y="67.0"/>
+        <point x="91.5" y="11.0"/>
+        <point x="32.5" y="11.5"/>
+      </arc>
+      <arc head="IntIL2_TC" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.8000976562500001" mult-x="-1.0603999138034226" mult-y="-1.0462728342438012" tail="IntLeu2">
+        <point x="75.0" y="17.5"/>
+      </arc>
+      <arc broken="true" head="IntIL2_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.5706185400485994" mult-x="-0.875" mult-y="-0.1875" tail="TCcells">
+        <point x="43.3125" y="15.25"/>
+        <point x="68.5" y="12.9375"/>
+      </arc>
+      <arc broken="true" head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="0.5270381361246108" mult-x="1.3580786741592874" mult-y="0.8558586381187112" tail="IntIL2_TC">
+        <point x="73.8125" y="12.8125"/>
+        <point x="40.5" y="16.9375"/>
+      </arc>
+      <arc head="IntIL2_B" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.79287109375" mult-x="-1.9993930730096565" mult-y="0.5" tail="IntLeu2">
+        <point x="85.0" y="19.0"/>
+      </arc>
+      <arc broken="true" head="IntIL2_B" kind="INPUT" mult="&lt;xb1&gt;" mult-k="0.5270634740591049" mult-x="-0.014416149039881532" mult-y="0.7122262644228741" tail="Bcell">
+        <point x="23.5" y="49.5"/>
+        <point x="89.0" y="22.5"/>
+      </arc>
+      <arc broken="true" head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt;" mult-k="0.38580425083637243" mult-x="1.1777948234572762" mult-y="-0.4327307899468842" tail="IntIL2_B">
+        <point x="90.0" y="19.0"/>
+        <point x="22.0" y="48.5"/>
+      </arc>
+      <arc head="DieTAA" kind="INPUT" mult="&lt;xtaa&gt;" mult-k="0.7545898437499999" mult-x="1.375" mult-y="0.3125" tail="TAAcell"/>
+      <arc head="DieCC" kind="INPUT" mult="&lt;xc1&gt;" mult-k="0.35244140625" tail="CCcells"/>
+      <arc head="CCcells" kind="OUTPUT" mult="&lt;xc1&gt;+&lt;xc2&gt;" mult-k="0.9122070312500001" mult-x="-3.5" mult-y="0.5544718386460659" tail="GrowCC">
+        <point x="50.0" y="58.0"/>
+      </arc>
+      <arc head="GrowCC" kind="INPUT" mult="&lt;xc2&gt;" mult-k="1.5149414062500002" mult-x="-1.6947473681714698" mult-y="-0.5" tail="CCcells">
+        <point x="35.5" y="56.0"/>
+        <point x="51.5" y="56.0"/>
+        <point x="51.5" y="60.0"/>
+      </arc>
+      <arc head="CCcells" kind="OUTPUT" mult="&lt;xc1&gt;" mult-k="0.8459960937500001" mult-x="-1.4929131544414034" mult-y="0.8899172195090088" tail="GrowCC2">
+        <point x="42.0" y="58.0"/>
+        <point x="32.0" y="58.0"/>
+      </arc>
+      <arc head="IntCC_AB" kind="INPUT" mult="&lt;yab1&gt;" mult-x="1.5" tail="ABcell"/>
+      <arc head="IntCC_AB" kind="INPUT" mult="&lt;xc1&gt;" mult-x="-1.0" mult-y="0.0" tail="CCcells"/>
+      <arc head="IntCC_TC" kind="INPUT" mult="&lt;xc1&gt;" mult-x="1.5" mult-y="0.0" tail="CCcells"/>
+      <arc broken="true" head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="0.3249096810817719" mult-x="-0.5002216476874572" mult-y="0.9997783523125463" tail="IntCC_TC">
+        <point x="18.0" y="64.5"/>
+        <point x="41.5" y="24.0"/>
+      </arc>
+      <arc broken="true" head="IntCC_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.49812751114368437" mult-x="-1.6569202467068251" mult-y="-0.07446380263453989" tail="TCcells">
+        <point x="39.5" y="27.0"/>
+        <point x="11.0" y="63.0"/>
+      </arc>
+      <arc head="DieB" kind="INPUT" mult="&lt;xb1&gt;" mult-k="0.39990234375" mult-x="0.0" tail="Bcell"/>
+      <arc head="IntTH_B" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.98798828125" mult-x="-0.8773237435140402" mult-y="-0.824734895247353" tail="THcells">
+        <point x="74.0" y="42.0"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-k="0.44462890624999996" mult-x="-1.09375" mult-y="-0.5" tail="IntTH_B"/>
+      <arc broken="true" head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt;" mult-x="0.0705737473029302" mult-y="1.214713126348535" tail="IntTH_B">
+        <point x="67.0" y="43.5"/>
+        <point x="14.5" y="44.0"/>
+      </arc>
+      <arc head="IntB_IL2" kind="INPUT" mult="&lt;xb1&gt;" mult-k="0.73447265625" mult-x="-1.2344169816180823" mult-y="-0.17208490809041166" tail="Bcell">
+        <point x="19.0" y="44.0"/>
+      </arc>
+      <arc broken="true" head="IntB_IL2" kind="INPUT" mult="&lt;yil2&gt;" mult-x="-1.6014495857567592" mult-y="-0.03381652858558937" tail="IntLeu2">
+        <point x="82.0" y="25.0"/>
+        <point x="10.5" y="42.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="0.7059570312500001" mult-x="3.0" mult-y="-0.09375" tail="DieCC"/>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="0.8583007812500001" mult-x="0.4766442678667353" mult-y="-1.5046339423134256" tail="IntCC_TC">
+        <point x="18.0" y="57.5"/>
+        <point x="30.5" y="56.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-x="2.59483253944072" mult-y="0.5" tail="IntCC_AB">
+        <point x="31.5" y="52.0"/>
+      </arc>
+      <arc head="IntTAA_AB" kind="INPUT" mult="&lt;xtaa&gt;" mult-x="-0.0625" mult-y="-0.5625" tail="TAAcell"/>
+      <arc head="IntTAA_AB" kind="INPUT" mult="&lt;yab1&gt;" mult-k="1.0227539062499997" mult-x="1.625" mult-y="0.0" tail="ABcell">
+        <point x="29.901171875" y="41.227935791015625"/>
+      </arc>
+      <arc head="GrowCC2" kind="INPUT" mult="&lt;xenv&gt;" tail="environment"/>
+      <arc head="environment" kind="OUTPUT" mult="&lt;xenv&gt;" tail="GrowCC2">
+        <point x="50.5" y="67.0"/>
+      </arc>
+      <arc head="environment" kind="OUTPUT" mult="&lt;xenv&gt;" tail="Inj">
+        <point x="32.0" y="11.0"/>
+        <point x="92.0" y="10.5"/>
+        <point x="89.5" y="68.0"/>
+      </arc>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="0.8303710937500001" tail="IntVC_TC">
+        <point x="46.0" y="25.5"/>
+      </arc>
+      <arc head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt; + &lt;xb2&gt;" mult-x="-2.0" mult-y="0.5" tail="IntB_IL2"/>
+      <arc head="Vax" kind="OUTPUT" mult="&lt;v1&gt;" mult-k="0.6577148437500001" tail="IntTC_VC">
+        <point x="34.658268374211914" y="21.257392972047093"/>
+        <point x="33.5" y="21.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <gspn name="CarcMamm_fornetlogo" show-fluid-cmd="false">
+    <nodes>
+      <color-class definition="agent vc{1..3}" name="VC" x="2.875" y="74.0"/>
+      <color-class definition="agent w{1..3}" name="IL2" x="13.0625" y="69.0"/>
+      <color-class definition="agent z{1..3}" name="IL12" x="17.75" y="73.0"/>
+      <color-class definition="agent y{1..3}" name="TAA" x="1.4375" y="70.0"/>
+      <color-class definition="agent ab{1..3}" name="AB" x="2.0" y="72.0"/>
+      <color-class definition="agent apc{1..3}" name="APC" x="22.0625" y="71.125"/>
+      <color-class definition="agent th{1..3}" name="TH" x="31.0625" y="73.125"/>
+      <color-class definition="agent b{1..3}" name="B" x="31.6875" y="69.0"/>
+      <color-class definition="agent cc{1..50}" name="CC" x="42.875" y="73.0"/>
+      <color-class definition="agent tc{1..3}" name="TC" x="41.0625" y="71.125"/>
+      <place domain="VC" label-x="-3.5" label-y="0.0" name="Vax" x="31.0" y="22.0"/>
+      <transition delay="unosuTinj" delay-x="2.0" delay-y="-1.5" label-x="2.0" label-y="0.0" name="Inj" nservers-x="0.5" nservers-y="1.0" rotation="4.71238898038469" type="EXP" x="26.55" y="17.0"/>
+      <constant consttype="REAL" name="unosuTinj" value="1.0" x="0.8125" y="19.0"/>
+      <color-var domain="VC" name="v1" x="3.125" y="80.0"/>
+      <place domain="TC" label-x="4.5" label-y="-1.5" name="TCcells" x="47.0" y="19.0"/>
+      <constant consttype="REAL" name="alpha19" value="1.0" x="0.9" y="20.375"/>
+      <constant consttype="REAL" name="gamma91" value="0.2" x="0.9" y="38.9375"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="__textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="1.0625">$\frac{dVC}{dt} = Kin(t,q) - \mu_1 VC - (\alpha_{19}TC+\alpha_{17}AB)VC$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="3.0625">$\frac{dTC}{dt} = \gamma_{91} VC - \alpha_{96}(\frac{IL2}{IL2+s_{90}})TC - \mu_9 TC$</text-box>
+      <transition delay="mu1 " delay-x="-2.5" delay-y="-1.0" label-x="-2.5" label-y="-2.0" name="DieVC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="22.55" y="22.0"/>
+      <constant consttype="REAL" name="mu1" value="1.0" x="9.5" y="18.0"/>
+      <transition delay="alpha96" delay-x="-2.5" delay-y="-1.0" label-x="-3.0" label-y="-2.0" name="IntTC_IL2" nservers-x="0.5" type="EXP" x="63.55" y="19.0"/>
+      <color-var domain="TC" name="xtc1" x="16.125" y="75.125"/>
+      <color-var domain="TC" name="xtc2" x="16.25" y="76.125"/>
+      <place domain="IL2" label-x="4.5" label-y="-1.5" name="IntLeu2" x="74.0" y="18.0"/>
+      <color-var domain="IL2" name="yil2" x="30.125" y="75.125"/>
+      <constant consttype="REAL" name="alpha96" value="0.05" x="0.9" y="23.75"/>
+      <place domain="AB" label-x="2.125" label-y="1.5625" name="ABcell" x="27.0" y="38.0"/>
+      <transition delay="alpha17 " delay-x="-1.5" delay-y="1.5" label-x="-3.0" label-y="-2.0" name="IntVC_AB" nservers-x="0.5" rotation="3.141592653589793" type="EXP" x="31.55" y="31.0"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="7.0625">$\frac{dTAA}{dt} = \gamma_{21}(\alpha_{19}TC+\alpha_{17}AB+\mu_1)VC+\gamma_{28}(\alpha_{88}+\alpha_{89}TC+\alpha_{87}AB)CC - $\\ \hspace{14mm}$-(\mu_2 + \alpha_{20}APC+\alpha_{27}AB)TAA$</text-box>
+      <transition delay="mu9" label-x="-2.5" label-y="-1.0" name="DieTC" nservers-x="0.5" type="EXP" x="53.55" y="14.0"/>
+      <constant consttype="REAL" name="mu7" value="1.0" x="9.5" y="24.0"/>
+      <place domain="B" label-y="2.0" name="Bcell" x="19.0" y="47.0"/>
+      <transition delay="gamma73" delay-x="-1.0" delay-y="-2.0" label-x="2.8125" label-y="1.5" name="IntAB_B" nservers-x="0.5" type="EXP" x="20.55" y="40.0"/>
+      <transition delay="mu7" delay-x="-0.5" delay-y="1.5" label-x="-2.1875" label-y="-0.5" name="DieAB" nservers-x="0.5" type="EXP" x="20.7375" y="35.0"/>
+      <color-var domain="B" name="xb1" x="36.625" y="75.125"/>
+      <color-var domain="AB" name="yab1" x="10.0" y="75.125"/>
+      <color-var domain="B" name="xb2" x="36.625" y="76.125"/>
+      <constant consttype="REAL" name="mu9" value="1.0" x="9.5" y="25.0"/>
+      <constant consttype="REAL" name="gamma73" value="3" x="0.9" y="39.8125"/>
+      <transition delay="alpha19 " delay-x="-2.5" delay-y="0.5" label-x="0.5" label-y="2.0" name="IntVC_TC" nservers-x="0.5" rotation="-0.0" type="EXP" x="41.55" y="31.0"/>
+      <place domain="TAA" label-x="-3.625" label-y="0.125" name="TAAcell" x="38.0" y="45.1875"/>
+      <constant consttype="REAL" name="alpha17" value="0.001" x="0.9" y="21.4375"/>
+      <transition delay="gamma91" delay-y="0.5" label-x="-0.5625" label-y="2.0" name="IntTC_VC" nservers-x="0.5" type="EXP" x="38.55" y="20.0"/>
+      <color-var domain="TAA" name="xtaa1" x="4.5625" y="76.125"/>
+      <place domain="CC" label-x="-3.5" label-y="0.0" name="CCcells" x="27.0" y="55.0"/>
+      <place domain="APC" label-x="2.5" label-y="-2.0" name="APCcells" x="56.0" y="45.1875"/>
+      <place domain="TH" label-x="-2.5" label-y="1.4375" name="THcells" x="74.1875" y="35.0"/>
+      <place domain="IL12" label-x="-0.125" label-y="-1.8125" name="IntLeu12" x="53.0" y="31.0"/>
+      <transition delay="gamma02" label-x="2.5" label-y="-2.0" name="Int_APC_TAA" nservers-x="0.5" type="EXP" x="47.55" y="45.1875"/>
+      <transition delay="gamma40" delay-y="-1.5" label-x="1.0625" label-y="2.1875" name="IntTH_APC" nservers-x="0.5" type="EXP" x="65.55" y="45.0"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="3.0" horiz-pos="2" name="__textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="18.5" x="0.75" y="11.5">1. VC; 2. TAA; 3. B; 4. TH; 5. IL12; 6. IL2, 7. AB; 8.CC; 9. TC; 10.APC</text-box>
+      <color-var domain="APC" name="yapc1" x="15.9375" y="77.4375"/>
+      <color-var domain="TH" name="xth1" x="23.125" y="75.125"/>
+      <color-var domain="IL12" name="xil12" x="30.0625" y="76.125"/>
+      <text-box bold="true" border-color="none" fill-color="none" height="4.25" horiz-pos="2" name="__textBox2" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="12.25" x="0.875" y="13.875">$\alpha_{i,j}$ Interazione tra i e j\\ $\gamma_{i,j}$ rilascio di i dovuto a j\\ $\mu_i$ morte di i</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="2.1875" y="5.0625">$\frac{dAB}{dt} = \gamma_{73} B - [\alpha_{78}CC+\alpha_{71}VC+\alpha_{72}TAA] AB - \mu_7 AB$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="3.0625">$\frac{dTH}{dt} = \gamma_{40}APC + \alpha_{46}(\frac{IL2}{IL2+s_{1}})TH  + \alpha_{45}(\frac{IL12}{IL12+s_{2}})TH - \mu_4 TH$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="1.0625">$\frac{dB}{dt} = \gamma_{34} TH + \alpha_{36}(\frac{IL2}{IL2+s_{3}})B - \mu_3 B$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="5.0625">$\frac{dIL2}{dt} = \gamma_{64}TH - (\alpha_{63}B+\alpha_{69}TC)IL2 - \mu_6 IL2$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="7.0625">$\frac{dIL12}{dt} = \gamma_{51}(\alpha_{19}TC+\alpha_{17}AB+\mu_1)VC - (\alpha_{54}TH+\alpha_{59}TC+\mu_5)IL12$</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="none" height="10.3125" horiz-pos="4" locked="true" name="__textBox3" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="63.1875" x="1.15625" y="0.40625">ODE</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="1.625" horiz-pos="2" name="copy_copy_copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="12.25" x="50.9375" y="1.0625">$\frac{dAPC}{dt} = \gamma_{02} TAA -  \mu_0 APC$</text-box>
+      <text-box bold="true" border-color="none" fill-color="none" height="2.0" horiz-pos="2" name="copy_copy_copy_copy_copy_copy_copy_copy_copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="21.0" x="34.1875" y="9.0625">$\frac{dCC}{dt} = [(1-\frac{CC}{c_{max}})k-\alpha_{88}]CC - (\alpha_{89}TC+\alpha_{87}AB)CC + p$</text-box>
+      <constant consttype="REAL" name="gamma02" value="0.07" x="0.9" y="41.0"/>
+      <transition delay="mu0" label-x="-4.0" label-y="0.0" name="DieAPC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="50.0"/>
+      <constant consttype="REAL" name="mu0" value="0.046" x="9.5" y="17.0"/>
+      <constant consttype="REAL" name="alpha71" value="0.001" x="0.9" y="22.625"/>
+      <constant consttype="REAL" name="gamma40" value="0.15" x="0.9" y="42.3125"/>
+      <transition delay="mu4" delay-y="-1.0" label-y="3.0" name="DieTH" nservers-x="0.5" type="EXP" x="78.7375" y="35.0"/>
+      <constant consttype="REAL" name="mu4" value="0.046" x="9.5" y="21.0"/>
+      <transition delay="gamma64" delay-x="1.0" delay-y="-0.5" label-x="-3.0" name="IntIL2_TH" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="27.0"/>
+      <color-var domain="TAA" name="xtaa" x="5.0" y="77.125"/>
+      <constant consttype="INTEGER" name="gamma21" value="3" x="0.9" y="47.0"/>
+      <constant consttype="INTEGER" name="gamma51" value="10" x="0.9" y="47.9375"/>
+      <constant consttype="REAL" name="gamma64" value="5.0" x="0.9" y="43.6875"/>
+      <transition delay="alpha46" delay-x="1.5" delay-y="0.0" label-x="2.0" name="IntTH_IL2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="83.7375" y="28.0"/>
+      <constant consttype="REAL" name="alpha46" value="0.009" x="0.9" y="27.375"/>
+      <color-var domain="TH" name="xth2" x="23.1875" y="76.125"/>
+      <transition delay="mu6" delay-x="0.625" delay-y="0.5625" label-x="1.0" label-y="2.0" name="DieIL2" nservers-x="0.5" type="EXP" x="68.55" y="22.0"/>
+      <constant consttype="REAL" name="mu6" value="0.23" x="9.5" y="23.0"/>
+      <transition delay="alpha54" label-x="1.0" name="IntIL12_TH" nservers-x="0.5" rotation="4.71238898038469" type="EXP" x="64.55" y="33.0"/>
+      <constant consttype="INTEGER" name="Kin" value="50" x="0.9" y="49.0"/>
+      <constant consttype="REAL" name="alpha54" value="0.0009" x="0.9" y="28.875"/>
+      <transition delay="alpha59" delay-x="-2.5" delay-y="0.0" label-x="2.5" label-y="-2.0" name="IntIL12_TC" nservers-x="0.5" type="EXP" x="53.55" y="25.0"/>
+      <constant consttype="REAL" name="alpha59" value="0.001" x="0.9" y="30.0625"/>
+      <transition delay="mu5" label-x="3.1875" label-y="0.125" name="DieIL12" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="53.55" y="37.0"/>
+      <constant consttype="REAL" name="mu5" value="0.077" x="9.5" y="22.1875"/>
+      <transition delay="alpha69" label-x="4.0" label-y="-0.5" name="IntIL2_TC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="74.55" y="13.0"/>
+      <constant consttype="REAL" name="alpha69" value="0.0001" x="0.9" y="24.8125"/>
+      <transition delay="alpha63" delay-x="-2.0" label-x="-4.0" label-y="0.0" name="IntIL2_B" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="85.55" y="14.0"/>
+      <constant consttype="REAL" name="alpha63" value="0.0001" x="0.9" y="32.0"/>
+      <transition delay="alpha88" delay-x="-2.75" delay-y="1.3125" label-x="-3.0" label-y="0.0" name="DieCC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="61.0"/>
+      <constant consttype="REAL" name="alpha88" value="0.0000001176" x="0.9" y="26.0"/>
+      <transition delay="mu2" delay-x="-1.625" delay-y="0.9375" label-x="2.1875" label-y="1.1875" name="DieTAA" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="38.55" y="36.0"/>
+      <constant consttype="REAL" name="mu2" value="0.077" x="9.5" y="19.0"/>
+      <color-var domain="CC" name="xc1" x="42.1875" y="75.1875"/>
+      <color-var domain="CC" name="xc2" x="42.25" y="76.25"/>
+      <transition delay="f_CC" label-x="-4.0" label-y="0.0" name="GrowCC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="49.55" y="61.0"/>
+      <constant consttype="INTEGER" name="k" value="10" x="0.6875" y="50.9375"/>
+      <constant consttype="REAL" name="f_CC" value="1.0" x="0.3125" y="37.375"/>
+      <transition delay="p" label-x="-4.0" label-y="0.0" name="GrowCC2" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="41.55" y="61.0"/>
+      <constant consttype="REAL" name="p" value="0.0" x="0.75" y="36.0"/>
+      <transition delay="alpha87 " delay-x="-2.5" delay-y="0.5" label-x="-3.5" label-y="-0.5" name="IntCC_AB" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="27.55" y="52.0"/>
+      <constant consttype="REAL" name="alpha87" value="0.0" x="0.9" y="33.0"/>
+      <transition delay="alpha89" delay-x="-3.0" delay-y="-1.0" label-x="-0.5" label-y="-2.0" name="IntCC_TC" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="17.55" y="61.0"/>
+      <constant consttype="REAL" name="alpha89" value="0.0" x="0.9" y="34.0"/>
+      <transition delay="mu3" name="DieB" nservers-x="0.5" type="EXP" x="9.55" y="49.0"/>
+      <constant consttype="REAL" name="mu3" value="0.0" x="9.5" y="20.0"/>
+      <transition delay="gamma34" label-x="-2.5" name="IntTH_B" nservers-x="0.5" type="EXP" x="69.55" y="41.0"/>
+      <constant consttype="REAL" name="gamma34" value="0.0" x="0.75" y="45.0"/>
+      <transition delay="alpha36" label-x="2.0" label-y="-2.0" name="IntB_IL2" nservers-x="0.5" type="EXP" x="9.55" y="45.0"/>
+      <constant consttype="REAL" name="alpha36" value="0.0" x="0.9" y="35.0"/>
+      <constant consttype="INTEGER" name="gamma28" value="3" x="0.25" y="46.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="#f7ffc0" height="14.0" horiz-pos="4" locked="true" name="__textBox4" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="49.0" x="6.5" y="54.0">CCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#ffd8c0" height="10.5" horiz-pos="4" name="__textBox5" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="18.5" x="46.5" y="43.0">APCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#c0e7ff" height="21.8125" horiz-pos="4" name="__textBox6" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="15.1875" x="30.40625" y="27.09375">TAAsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f4f3ff" height="8.5" horiz-pos="2" name="__textBox7" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="23.0" x="6.5" y="34.0">ABsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f4fff3" height="8.5" horiz-pos="2" name="__textBox8" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="20.0" x="6.5" y="43.0">Bsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fefff3" height="12.5" horiz-pos="2" name="__textBox9" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="29.5" x="37.5" y="12.0">TCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fff3f3" height="13.0" horiz-pos="2" name="__textBox10" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="20.0" x="15.0" y="13.5">VCsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f3fbff" height="17.5" horiz-pos="4" name="__textBox11" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="23.5" x="65.5" y="26.5">THsubnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#fff8f3" height="13.5" horiz-pos="4" name="__textBox12" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="22.5" x="67.5" y="12.0625">IL2subnet</text-box>
+      <text-box bold="true" border-color="#000000" fill-color="#f3fff6" height="17.5" horiz-pos="2" name="__textBox13" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" vert-pos="3" width="18.0" x="46.5" y="25.0">IL12subnet</text-box>
+      <transition delay="alpha27" label-x="-1.25" name="IntTAA_AB" nservers-x="0.5" type="EXP" x="31.8" y="43.1875"/>
+      <constant consttype="REAL" name="alpha27" value="0.00001" x="0.8125" y="31.0"/>
+      <color-class definition="agent env{1..1}" name="ENV" x="54.125" y="71.0"/>
+      <color-var domain="ENV" name="xenv" x="53.9375" y="73.0"/>
+      <place domain="ENV" marking="&lt;env1&gt;" name="environment" x="66.0" y="66.0"/>
+      <constant consttype="REAL" name="R" value="0.0" x="33.125" y="55.0"/>
+    </nodes>
+    <edges>
+      <arc head="Vax" kind="OUTPUT" mult="&lt;v1&gt;" mult-k="0.99384765625" mult-x="-3.0" mult-y="-3.906250000014211E-4" tail="Inj">
+        <point x="29.347265625" y="19.68408203125"/>
+      </arc>
+      <arc head="DieVC" kind="INPUT" mult="&lt;v1&gt;" mult-k="1.40966796875" mult-x="-0.5003334603658551" mult-y="-1.0" tail="Vax">
+        <point x="31.0" y="25.5"/>
+        <point x="25.0" y="25.5"/>
+      </arc>
+      <arc head="IntTC_IL2" kind="INPUT" mult="&lt;xtc1&gt;" mult-x="0.5" mult-y="-1.0" tail="TCcells"/>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;+&lt;xtc2&gt;" mult-k="1.6079101562499996" mult-x="1.8620219515098597" mult-y="-0.9181181401531688" tail="IntTC_IL2">
+        <point x="60.0" y="21.5"/>
+        <point x="53.0" y="21.5"/>
+      </arc>
+      <arc head="IntTC_IL2" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.85537109375" mult-x="0.5692378786552794" mult-y="-0.7461662876467408" tail="IntLeu2">
+        <point x="67.5" y="19.0"/>
+      </arc>
+      <arc head="IntLeu2" kind="OUTPUT" mult="&lt;yil2&gt;" mult-k="1.4583007812499997" mult-x="-1.1873828125000045" mult-y="-0.5" tail="IntTC_IL2">
+        <point x="69.6875" y="20.0"/>
+        <point x="72.6875" y="20.0"/>
+      </arc>
+      <arc head="DieTC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="1.45068359375" mult-x="0.4375" mult-y="0.6535325665464953" tail="TCcells">
+        <point x="48.0" y="15.0"/>
+      </arc>
+      <arc head="ABcell" kind="OUTPUT" mult="&lt;yab1&gt;" mult-k="1.36728515625" mult-x="-1.7800557286051912" mult-y="-0.5952062970535223" tail="IntAB_B">
+        <point x="25.6875" y="41.0"/>
+      </arc>
+      <arc head="IntVC_AB" kind="INPUT" mult="&lt;yab1&gt;" mult-k="0.8172851562500001" mult-x="-1.2357313130221286" mult-y="-0.5156272983047216" tail="ABcell">
+        <point x="28.1875" y="35.0"/>
+      </arc>
+      <arc head="IntVC_AB" kind="INPUT" mult="&lt;v1&gt;" mult-k="0.27783203125" mult-y="-4.8828125E-4" tail="Vax"/>
+      <arc head="DieAB" kind="INPUT" mult="&lt;yab1&gt;" mult-k="1.18466796875" mult-x="-0.9084318541425276" mult-y="0.9921783421972279" tail="ABcell">
+        <point x="25.6875" y="36.0"/>
+      </arc>
+      <arc head="IntAB_B" kind="INPUT" mult="&lt;xb1&gt;" mult-k="1.0348632812499998" mult-y="0.5" tail="Bcell">
+        <point x="22.5" y="45.5"/>
+      </arc>
+      <arc head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt;" mult-k="0.30888671875000007" mult-x="-1.4998046874999993" mult-y="-0.25068359374999716" tail="IntAB_B"/>
+      <arc head="IntVC_TC" kind="INPUT" mult="&lt;v1&gt;" mult-k="0.44541015625" mult-x="0.6296528491568409" mult-y="0.9861198184338171" tail="Vax">
+        <point x="38.5" y="27.5"/>
+      </arc>
+      <arc head="IntVC_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.6489257812500001" mult-x="-1.5" mult-y="-0.6883433259918306" tail="TCcells">
+        <point x="48.0" y="31.0"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="1.1676757812499998" mult-x="-0.0625" mult-y="0.71875" tail="IntVC_TC">
+        <point x="43.0625" y="39.9375"/>
+        <point x="40.21387422986051" y="42.872885800214604"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult=" &lt;xtaa&gt;" mult-k="1.53310546875" mult-x="0.05224609375" mult-y="-0.64111328125" tail="IntVC_AB">
+        <point x="35.0" y="40.5"/>
+        <point x="37.745234768600476" y="42.796935374103796"/>
+      </arc>
+      <arc head="IntTC_VC" kind="INPUT" mult="&lt;v1&gt;" mult-k="0.31650390625" tail="Vax"/>
+      <arc head="IntTC_VC" kind="INPUT" mult="&lt;xtc1&gt;" mult-x="-1.25" mult-y="-0.8125" tail="TCcells"/>
+      <arc head="APCcells" kind="OUTPUT" mult="&lt;yapc1&gt;" mult-k="0.38896484374999996" mult-x="0.9993164062500028" mult-y="-1.0" tail="Int_APC_TAA"/>
+      <arc head="Int_APC_TAA" kind="INPUT" mult="&lt;xtaa1&gt;" tail="TAAcell"/>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt; + &lt;xtc2&gt;" mult-k="1.5036132812499998" mult-x="1.0001541940789451" mult-y="-1.5" tail="IntTC_VC">
+        <point x="36.5" y="19.0"/>
+        <point x="37.5" y="17.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa1&gt;" mult-k="1.12783203125" mult-x="0.05563429958476718" mult-y="0.9574894859616592" tail="Int_APC_TAA">
+        <point x="44.0" y="44.25"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="0.79697265625" mult-x="-2.5" mult-y="0.9816607675676039" tail="DieVC">
+        <point x="23.0" y="33.0"/>
+      </arc>
+      <arc head="DieAPC" kind="INPUT" mult="&lt;yapc1&gt;" mult-x="2.5" mult-y="0.5" tail="APCcells"/>
+      <arc head="IntTH_APC" kind="INPUT" mult="&lt;yapc1&gt;" mult-x="-0.5" mult-y="-0.5" tail="APCcells"/>
+      <arc head="APCcells" kind="OUTPUT" mult="&lt;yapc1&gt;" mult-k="0.60517578125" mult-x="-1.677603893543541" mult-y="0.7962840148983616" tail="IntTH_APC">
+        <point x="61.16655327390871" y="47.28163192171566"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-k="0.8020507812500001" mult-x="0.47266791260518204" mult-y="-1.0" tail="IntTH_APC">
+        <point x="75.1875" y="46.1875"/>
+      </arc>
+      <arc head="DieTH" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.50009765625" mult-x="-3.9062499999431566E-4" mult-y="1.5" tail="THcells"/>
+      <arc head="IntLeu12" kind="OUTPUT" mult="&lt;xil12&gt;" mult-x="0.0" mult-y="0.5" tail="IntVC_TC"/>
+      <arc head="IntIL2_TH" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.6428710937500001" mult-y="1.5000976562500021" tail="THcells"/>
+      <arc head="IntLeu2" kind="OUTPUT" mult="&lt;yil2&gt;" mult-k="0.5999023437500001" tail="IntIL2_TH"/>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-k="1.0194335937499996" mult-x="-1.5908461225223505" mult-y="0.09071681196878956" tail="IntIL2_TH">
+        <point x="74.1875" y="31.5"/>
+        <point x="74.1875" y="33.0"/>
+      </arc>
+      <arc head="IntTH_IL2" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.6231445312500001" tail="THcells"/>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;+&lt;xth2&gt;" mult-x="-2.6926683929086863" mult-y="-0.03127178568617239" tail="IntTH_IL2">
+        <point x="78.6875" y="32.0"/>
+      </arc>
+      <arc head="IntTH_IL2" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.5989257812500001" mult-x="1.5768554687499972" mult-y="-0.6154296875000007" tail="IntLeu2"/>
+      <arc head="IntLeu2" kind="OUTPUT" mult="&lt;yil2&gt;" mult-k="1.1838867187500002" mult-x="1.063856790972963" mult-y="-0.19449029861006295" tail="IntTH_IL2">
+        <point x="80.3125" y="29.0625"/>
+      </arc>
+      <arc head="DieIL2" kind="INPUT" mult="&lt;yil2&gt;" mult-k="1.10244140625" mult-x="-0.9998427690005371" mult-y="-0.4992358519092903" tail="IntLeu2">
+        <point x="75.0040091801539" y="22.99896300755536"/>
+      </arc>
+      <arc broken="true" head="IntLeu12" kind="OUTPUT" mult="&lt;xil12&gt;" mult-k="0.4425021201372146" mult-x="-1.999578903841261" mult-y="1.5" tail="DieVC">
+        <point x="17.5" y="23.0"/>
+        <point x="57.0" y="32.0"/>
+      </arc>
+      <arc broken="true" head="IntLeu12" kind="OUTPUT" mult="&lt;xil12&gt;" mult-k="0.2001352071762085" mult-x="0.0" mult-y="2.051299864574517" tail="IntVC_AB">
+        <point x="32.0" y="37.0"/>
+        <point x="61.0" y="37.5"/>
+      </arc>
+      <arc head="IntIL12_TH" kind="INPUT" mult="&lt;xil12&gt;" mult-x="-0.5" mult-y="0.5" tail="IntLeu12"/>
+      <arc head="IntIL12_TH" kind="INPUT" mult="&lt;xth1&gt; " mult-k="0.75380859375" mult-x="0.25" mult-y="0.8125" tail="THcells">
+        <point x="68.57258911132813" y="34.7013671875"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt; +  &lt;xth2&gt;" mult-x="2.1875" mult-y="-0.6875" tail="IntIL12_TH">
+        <point x="71.875" y="34.0625"/>
+      </arc>
+      <arc head="DieIL12" kind="INPUT" mult="&lt;xil12&gt;" mult-x="-1.3125" mult-y="0.0625" tail="IntLeu12"/>
+      <arc head="IntIL12_TC" kind="INPUT" mult="&lt;xil12&gt;" mult-k="0.5833007812500001" mult-y="0.4998046874999993" tail="IntLeu12"/>
+      <arc head="IntIL12_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.50009765625" mult-x="-0.09814453125" mult-y="1.0822265625000007" tail="TCcells"/>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="1.1473632812499996" mult-x="1.5889291659594988" mult-y="-0.06226500946300817" tail="IntIL12_TC">
+        <point x="53.0" y="22.5"/>
+        <point x="52.14568992930741" y="21.96605620581713"/>
+      </arc>
+      <arc head="Inj" kind="INPUT" mult="&lt;xenv&gt;" mult-k="3.202246093750001" tail="environment">
+        <point x="88.5" y="67.0"/>
+        <point x="91.5" y="11.0"/>
+        <point x="32.5" y="11.5"/>
+      </arc>
+      <arc head="IntIL2_TC" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.8000976562500001" mult-x="-1.0603999138034226" mult-y="-1.0462728342438012" tail="IntLeu2">
+        <point x="75.0" y="17.5"/>
+      </arc>
+      <arc broken="true" head="IntIL2_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.5706185400485994" mult-x="-0.875" mult-y="-0.1875" tail="TCcells">
+        <point x="43.3125" y="15.25"/>
+        <point x="68.5" y="12.9375"/>
+      </arc>
+      <arc broken="true" head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="0.5270381361246108" mult-x="1.3580786741592874" mult-y="0.8558586381187112" tail="IntIL2_TC">
+        <point x="73.8125" y="12.8125"/>
+        <point x="40.5" y="16.9375"/>
+      </arc>
+      <arc head="IntIL2_B" kind="INPUT" mult="&lt;yil2&gt;" mult-k="0.79287109375" mult-x="-1.9993930730096565" mult-y="0.5" tail="IntLeu2">
+        <point x="85.0" y="19.0"/>
+      </arc>
+      <arc broken="true" head="IntIL2_B" kind="INPUT" mult="&lt;xb1&gt;" mult-k="0.5270634740591049" mult-x="-0.014416149039881532" mult-y="0.7122262644228741" tail="Bcell">
+        <point x="23.5" y="49.5"/>
+        <point x="89.0" y="22.5"/>
+      </arc>
+      <arc broken="true" head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt;" mult-k="0.38580425083637243" mult-x="1.1777948234572762" mult-y="-0.4327307899468842" tail="IntIL2_B">
+        <point x="90.0" y="19.0"/>
+        <point x="22.0" y="48.5"/>
+      </arc>
+      <arc head="DieTAA" kind="INPUT" mult="&lt;xtaa&gt;" mult-k="0.7545898437499999" mult-x="1.375" mult-y="0.3125" tail="TAAcell"/>
+      <arc head="DieCC" kind="INPUT" mult="&lt;xc1&gt;" mult-k="0.35244140625" tail="CCcells"/>
+      <arc head="CCcells" kind="OUTPUT" mult="&lt;xc1&gt;+&lt;xc2&gt;" mult-k="0.9122070312500001" mult-x="-3.5" mult-y="0.5544718386460659" tail="GrowCC">
+        <point x="50.0" y="58.0"/>
+      </arc>
+      <arc head="GrowCC" kind="INPUT" mult="&lt;xc2&gt;" mult-k="1.5149414062500002" mult-x="-1.6947473681714698" mult-y="-0.5" tail="CCcells">
+        <point x="35.5" y="56.0"/>
+        <point x="51.5" y="56.0"/>
+        <point x="51.5" y="60.0"/>
+      </arc>
+      <arc head="CCcells" kind="OUTPUT" mult="&lt;xc1&gt;" mult-k="0.8459960937500001" mult-x="-1.4929131544414034" mult-y="0.8899172195090088" tail="GrowCC2">
+        <point x="42.0" y="58.0"/>
+        <point x="32.0" y="58.0"/>
+      </arc>
+      <arc head="IntCC_AB" kind="INPUT" mult="&lt;yab1&gt;" mult-x="1.5" tail="ABcell"/>
+      <arc head="IntCC_AB" kind="INPUT" mult="&lt;xc1&gt;" mult-x="-1.0" mult-y="0.0" tail="CCcells"/>
+      <arc head="IntCC_TC" kind="INPUT" mult="&lt;xc1&gt;" mult-x="1.5" mult-y="0.0" tail="CCcells"/>
+      <arc broken="true" head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="0.3249096810817719" mult-x="-0.5002216476874572" mult-y="0.9997783523125463" tail="IntCC_TC">
+        <point x="18.0" y="64.5"/>
+        <point x="41.5" y="24.0"/>
+      </arc>
+      <arc broken="true" head="IntCC_TC" kind="INPUT" mult="&lt;xtc1&gt;" mult-k="0.49812751114368437" mult-x="-1.6569202467068251" mult-y="-0.07446380263453989" tail="TCcells">
+        <point x="45.0" y="28.0"/>
+        <point x="16.5" y="64.0"/>
+      </arc>
+      <arc head="DieB" kind="INPUT" mult="&lt;xb1&gt;" mult-k="0.39990234375" mult-x="0.0" tail="Bcell"/>
+      <arc head="IntTH_B" kind="INPUT" mult="&lt;xth1&gt;" mult-k="0.98798828125" mult-x="-0.8773237435140402" mult-y="-0.824734895247353" tail="THcells">
+        <point x="74.0" y="42.0"/>
+      </arc>
+      <arc head="THcells" kind="OUTPUT" mult="&lt;xth1&gt;" mult-k="0.44462890624999996" mult-x="-1.09375" mult-y="-0.5" tail="IntTH_B"/>
+      <arc broken="true" head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt;" mult-x="0.0705737473029302" mult-y="1.214713126348535" tail="IntTH_B">
+        <point x="67.0" y="43.5"/>
+        <point x="14.5" y="44.0"/>
+      </arc>
+      <arc head="IntB_IL2" kind="INPUT" mult="&lt;xb1&gt;" mult-k="0.73447265625" mult-x="-1.2344169816180823" mult-y="-0.17208490809041166" tail="Bcell">
+        <point x="19.0" y="44.0"/>
+      </arc>
+      <arc broken="true" head="IntB_IL2" kind="INPUT" mult="&lt;yil2&gt;" mult-x="-1.6014495857567592" mult-y="-0.03381652858558937" tail="IntLeu2">
+        <point x="82.0" y="25.0"/>
+        <point x="10.5" y="42.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="0.7059570312500001" mult-x="3.0" mult-y="-0.09375" tail="DieCC"/>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-k="0.8583007812500001" mult-x="0.4766442678667353" mult-y="-1.5046339423134256" tail="IntCC_TC">
+        <point x="18.0" y="57.5"/>
+        <point x="30.5" y="56.5"/>
+      </arc>
+      <arc head="TAAcell" kind="OUTPUT" mult="&lt;xtaa&gt;" mult-x="2.59483253944072" mult-y="0.5" tail="IntCC_AB">
+        <point x="31.5" y="52.0"/>
+      </arc>
+      <arc head="IntTAA_AB" kind="INPUT" mult="&lt;xtaa&gt;" mult-x="-0.0625" mult-y="-0.5625" tail="TAAcell"/>
+      <arc head="IntTAA_AB" kind="INPUT" mult="&lt;yab1&gt;" mult-k="1.0227539062499997" mult-x="1.625" mult-y="0.0" tail="ABcell">
+        <point x="29.901171875" y="41.227935791015625"/>
+      </arc>
+      <arc head="GrowCC2" kind="INPUT" mult="&lt;xenv&gt;" tail="environment"/>
+      <arc head="environment" kind="OUTPUT" mult="&lt;xenv&gt;" tail="GrowCC2">
+        <point x="50.5" y="67.0"/>
+      </arc>
+      <arc head="environment" kind="OUTPUT" mult="&lt;xenv&gt;" tail="Inj">
+        <point x="32.0" y="11.0"/>
+        <point x="92.0" y="10.5"/>
+        <point x="89.5" y="68.0"/>
+      </arc>
+      <arc head="TCcells" kind="OUTPUT" mult="&lt;xtc1&gt;" mult-k="0.8303710937500001" tail="IntVC_TC">
+        <point x="42.5" y="25.0"/>
+      </arc>
+      <arc head="Bcell" kind="OUTPUT" mult="&lt;xb1&gt; + &lt;xb2&gt;" mult-x="-2.0" mult-y="0.5" tail="IntB_IL2"/>
+      <arc head="Vax" kind="OUTPUT" mult="&lt;v1&gt;" mult-k="0.6577148437500001" tail="IntTC_VC">
+        <point x="34.658268374211914" y="21.257392972047093"/>
+        <point x="33.5" y="21.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="CarcMamm" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>
