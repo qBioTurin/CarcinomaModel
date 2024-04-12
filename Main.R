@@ -14,8 +14,8 @@ model.analysis(solver_fname = "./Net/CarcMamm_revised.solver",
 							 f_time = 1068 ,
 							 s_time = 1,
 							 i_time = 0,
-							 n_run = 1000,
-							 parallel_processors = 20,
+							 n_run = 100,
+							 parallel_processors = 4,
 							 event_times = c(2,8,23,29,86,92,107,113,170,176,191,197,254,
 							 								260,275,281,338,344,359,365,422,428,443,449,
 							 								506,512,527,533,590,596,611,617,674,680,695,701,
@@ -74,13 +74,18 @@ model.analysis(solver_fname = "./Net/CarcMamm_revised.solver",
 							 								1010,1016,1031,1037
 							 ),
 							 event_function = "Injections",
-							 solver_type = "LSODA",debug = T
+							 solver_type = "LSODA"
 )
+
+system("mv CarcMamm_revised_analysis CronCarcMamm_revised_analysis50_Det")
+
+pl_det = ModelAnalysisPlot(
+	tracefile = "CronCarcMamm_revised_analysis50_Det/CarcMamm_revised-analysis-1.trace"
+)
+
 
 pl = ModelAnalysisPlot(
-	tracefile = "CarcMamm_revised_analysis/CarcMamm_revised-analysis-1.trace"
+	tracefile = "CronCarcMamm_revised_analysis50/CarcMamm_revised-analysis-1.trace"
 )
 pl
-
-
 
