@@ -25,7 +25,7 @@ To set up the project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/CarcMamm_Model_Analysis.git
+   git clone https://github.com/qBioTurin/CarcinomaModel.git
    cd CarcMamm_Model_Analysis
    ```
    
