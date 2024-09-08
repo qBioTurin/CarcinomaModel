@@ -39,10 +39,10 @@ PRCCPlot <-function(folder, scd_folder, RDATA_name, trace_name,
 		ylim(-1,1) +
 		annotate("rect", xmin = 0, xmax = 1069, ymin = -0.2, ymax = 0.2, fill = "yellow", alpha = 0.2) +
 		geom_vline(xintercept = c(2,8,23,29,86,92,107,113,170,176,254,
-																						260,275,281,338,344,359,365,422,428,443,449,
-																						506,512,527,533,590,596,611,617,674,680,695,701,
-																						758,764,778,785,842,848,863,869,926,932,
-																						1010,1016,1031,1037),
+															260,275,281,338,344,359,365,422,428,443,449,
+															506,512,527,533,590,596,611,617,674,680,695,701,
+															758,764,778,785,842,848,863,869,926,932,
+															1010,1016,1031,1037),
 							 colour="plum4", linetype = "longdash")+
 		labs(x = "Time", y = "PRCC") +
 		theme_minimal() +
@@ -55,50 +55,50 @@ PRCCPlot <-function(folder, scd_folder, RDATA_name, trace_name,
 
 SensitivityPlot <-function(cell){
 
-listFile<-list.files("./CarcMamm_revised_analysis/",
-										 pattern = ".trace")
+	listFile<-list.files("./CarcMamm_revised_analysis/",
+											 pattern = ".trace")
 
-load(paste0("./CarcMamm_revised_analysis/","CarcMamm_revised-analysis.RData"))
-
-
-VCVariation<-t(sapply(1:length(listFile),
-											function(x){
-												return(c(x,config[[31]][[x]][[3]]))
-											}) )
-
-id.traces<-as.numeric(gsub("[^[:digit:].]", "",listFile) )
-
-lastValueCCcells <-t(sapply(1:length(listFile),
-														function(x){
-															trace.tmp <- read.csv(paste0("./CarcMamm_revised_analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
-
-															return(c(x,trace.tmp[1069,cell]))
-														}) )
-
-CellsMerge <- merge(lastValueCCcells,VCVariation,by="V1")
-
-colnames(CellsMerge) <- c("ID", "CellsLastValue", "VCValue")
-
-plCCells<-ggplot( )+
-	geom_point(data=CellsMerge,
-						aes(x=VCValue,y=CellsLastValue,color=VCValue))+
-	scale_colour_gradientn(colours = c("blue", "yellow", "red"),
-												 values = c(0, 1, 2))+
-	theme_bw()+
-	theme(axis.text=element_text(size=18),
-				axis.title=element_text(size=20,face="bold"),
-				legend.text=element_text(size=18),
-				legend.title=element_text(size=20,face="bold"),
-				legend.position="right",
-				legend.key.size = unit(1.3, "cm"),
-				legend.key.width = unit(1.3,"cm") )+
-	labs(x="VC", y=cell)
+	load(paste0("./CarcMamm_revised_analysis/","CarcMamm_revised-analysis.RData"))
 
 
+	VCVariation<-t(sapply(1:length(listFile),
+												function(x){
+													return(c(x,config[[31]][[x]][[3]]))
+												}) )
+
+	id.traces<-as.numeric(gsub("[^[:digit:].]", "",listFile) )
+
+	lastValueCCcells <-t(sapply(1:length(listFile),
+															function(x){
+																trace.tmp <- read.csv(paste0("./CarcMamm_revised_analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
+
+																return(c(x,trace.tmp[1069,cell]))
+															}) )
+
+	CellsMerge <- merge(lastValueCCcells,VCVariation,by="V1")
+
+	colnames(CellsMerge) <- c("ID", "CellsLastValue", "VCValue")
+
+	plCCells<-ggplot( )+
+		geom_point(data=CellsMerge,
+							 aes(x=VCValue,y=CellsLastValue,color=VCValue))+
+		scale_colour_gradientn(colours = c("blue", "yellow", "red"),
+													 values = c(0, 1, 2))+
+		theme_bw()+
+		theme(axis.text=element_text(size=18),
+					axis.title=element_text(size=20,face="bold"),
+					legend.text=element_text(size=18),
+					legend.title=element_text(size=20,face="bold"),
+					legend.position="right",
+					legend.key.size = unit(1.3, "cm"),
+					legend.key.width = unit(1.3,"cm") )+
+		labs(x="VC", y=cell)
 
 
 
-return(plCCells)
+
+
+	return(plCCells)
 
 }
 
@@ -140,11 +140,11 @@ SensitivityPlotMoreComplex <-function(cell, vector_inj){
 
 	plCCells<-ggplot( )+
 		geom_line(data=traces,
-							 aes(x=Time,y=get(cell), group = id, color = vc))+
+							aes(x=Time,y=get(cell), group = id, color = vc))+
 		scale_colour_gradientn(colours = c("blue", "yellow", "red"),
 													 values = c(0, 1, 2))+
 		geom_vline(xintercept = vector_inj,
-							  colour="plum4", linetype = "longdash")+
+							 colour="plum4", linetype = "longdash")+
 		theme_bw()+
 		theme(axis.text=element_text(size=18),
 					axis.title=element_text(size=20,face="bold"),
@@ -166,93 +166,92 @@ SensitivityPlotMoreComplex <-function(cell, vector_inj){
 
 whatifSensitivity <- function(vector_inj, variation){
 
+	model.sensitivity(n_config = 1000,
+										solver_fname = "./Net/CarcMamm_revised.solver",
+										parameters_fname = "./Inputs/CopyOfinputSensitivityCarcinoma_2060.csv",
+										#folder_trace = "./CarcMamm_revised_analysis",
+										functions_fname = "./Inputs/RSensitivityFunction.R",
+										f_time = 1068 ,
+										s_time = 1,
+										i_time = 0,
+										target_value = "targetCCells",
+										event_times = vector_inj,
+										event_function = "Injections",
+										parallel_processors = 20)
 
-		model.sensitivity(n_config = 1000,
-											solver_fname = "./Net/CarcMamm_revised.solver",
-											parameters_fname = "./Inputs/CopyOfinputSensitivityCarcinoma_2060.csv",
-											#folder_trace = "./CarcMamm_revised_analysis",
-											functions_fname = "./Inputs/RSensitivityFunction.R",
-											f_time = 1068 ,
-											s_time = 1,
-											i_time = 0,
-											target_value = "targetCCells",
-											event_times = vector_inj,
-											event_function = "Injections",
-											parallel_processors = 10)
+	if(!(dir.exists(paste0("whatifanalysis",variation)))){
+		dir.create(paste0("whatifanalysis",variation))
+	}
 
-		 if(!(dir.exists(paste0("whatifanalysis",variation)))){
-		 	dir.create(paste0("whatifanalysis",variation))
-		 }
-
-		system(paste0("mv ./CarcMamm_revised_sensitivity/ whatifanalysis", variation,"/CCcellssensitivity"))
-
-
-		 spCC = SensitivityPlot(cell  = "CCcells")
-		 spCCC = SensitivityPlotMoreComplex(cell = "CCcells", vector_inj)
-		 #plCC = PRCCPlot(folder = "./CarcMamm_revised_sensitivity/", scd_folder = "CarcMamm_revised_analysis/", RDATA_name = "CarcMamm_revised-analysis.RData", trace_name = "CarcMamm_revised-analysis-",
-
-		 pCC <- (spCCC + theme(legend.position = "none") + labs(title= "Trajectories of CCcells"))+(spCC + labs(title = "CCells at final time"))
+	system(paste0("mv ./CarcMamm_revised_sensitivity/ whatifanalysis", variation,"/CCcellssensitivity"))
 
 
+	spCC = SensitivityPlot(cell  = "CCcells")
+	spCCC = SensitivityPlotMoreComplex(cell = "CCcells", vector_inj)
+	#plCC = PRCCPlot(folder = "./CarcMamm_revised_sensitivity/", scd_folder = "CarcMamm_revised_analysis/", RDATA_name = "CarcMamm_revised-analysis.RData", trace_name = "CarcMamm_revised-analysis-",
 
-		 ggsave("pCC.pdf", width = 30, height = 10)
+	pCC <- (spCCC + theme(legend.position = "none") + labs(title= "Trajectories of CCcells"))+(spCC + labs(title = "CCells at final time"))
 
-
- 		model.sensitivity(n_config = 1000,
- 											folder_trace = "./CarcMamm_revised_analysis",
- 											functions_fname = "./Inputs/RSensitivityFunction.R",
- 											f_time = 1068 ,
- 											s_time = 1,
- 											i_time = 0,
- 											target_value = "targetABcell",
- 											event_times = vector_inj,
- 											event_function = "Injections",
- 											parallel_processors = 10)
+	ggsave("pCC.pdf", width = 30, height = 10)
 
 
- 		system(paste0("mv Model_sensitivity/ whatifanalysis", variation,"/ABcellssensitivity"))
+	model.sensitivity(n_config = 1000,
+										folder_trace = "./CarcMamm_revised_analysis",
+										functions_fname = "./Inputs/RSensitivityFunction.R",
+										f_time = 1068 ,
+										s_time = 1,
+										i_time = 0,
+										target_value = "targetABcell",
+										event_times = vector_inj,
+										event_function = "Injections",
+										parallel_processors = 20)
+
+
+	system(paste0("mv Model_sensitivity/ whatifanalysis", variation,"/ABcellssensitivity"))
 
 
 
-  		spAB = SensitivityPlot(cell  = "ABcell")
-   		spCAB = SensitivityPlotMoreComplex(cell = "ABcell", vector_inj)
-  		#plAB = PRCCPlot(folder = "./Model_sensitivity//", scd_folder = "CarcMamm_revised_analysis/", RDATA_name = "CarcMamm_revised-analysis.RData", trace_name = "CarcMamm_revised-analysis-",
-  									#	prcc_name= "prcc_Model_sensitivity.RData")
+	spAB = SensitivityPlot(cell  = "ABcell")
+	spCAB = SensitivityPlotMoreComplex(cell = "ABcell", vector_inj)
+	#plAB = PRCCPlot(folder = "./Model_sensitivity//", scd_folder = "CarcMamm_revised_analysis/", RDATA_name = "CarcMamm_revised-analysis.RData", trace_name = "CarcMamm_revised-analysis-",
+	#	prcc_name= "prcc_Model_sensitivity.RData")
 
 
-  		pAB <- (spCAB + theme(legend.position = "none") + labs(title= "Trajectories of ABcells")) + (spAB + labs(title = "ABcells at final time"))
+	pAB <- (spCAB + theme(legend.position = "none") + labs(title= "Trajectories of ABcells")) + (spAB + labs(title = "ABcells at final time"))
 
-  		ggsave("pAB.pdf", width = 30, height = 10)
-
-
- 		model.sensitivity(n_config = 1000,
- 											folder_trace = "./CarcMamm_revised_analysis",
- 											functions_fname = "./Inputs/RSensitivityFunction.R",
- 											f_time = 1068 ,
- 											s_time = 1,
- 											i_time = 0,
- 											target_value = "targetTCcells",
- 											event_times = vector_inj,
- 											event_function = "Injections",
- 											parallel_processors = 10)
-
- 		system(paste0("mv Model_sensitivity/ whatifanalysis", variation,"/TCcellssensitivity"))
+	ggsave("pAB.pdf", width = 30, height = 10)
 
 
- 		 spTC = SensitivityPlot(cell  = "TCcells")
- 		 spCTC = SensitivityPlotMoreComplex(cell = "TCcells", vector_inj)
- 		 #plTC = PRCCPlot(folder = "./Model_sensitivity//", scd_folder = "CarcMamm_revised_analysis/", RDATA_name = "CarcMamm_revised-analysis.RData", trace_name = "CarcMamm_revised-analysis-",
- 		 								#prcc_name= "prcc_Model_sensitivity.RData")
+	model.sensitivity(n_config = 1000,
+										folder_trace = "./CarcMamm_revised_analysis",
+										functions_fname = "./Inputs/RSensitivityFunction.R",
+										f_time = 1068 ,
+										s_time = 1,
+										i_time = 0,
+										target_value = "targetTCcells",
+										event_times = vector_inj,
+										event_function = "Injections",
+										parallel_processors = 20)
+
+	system(paste0("mv Model_sensitivity/ whatifanalysis", variation,"/TCcellssensitivity"))
 
 
- 		 pTC <- (spCTC + theme(legend.position = "none")+ labs(title= "Trajectories of TCcells"))+(spTC + labs(title = "TCells at final time"))
+	spTC = SensitivityPlot(cell  = "TCcells")
+	spCTC = SensitivityPlotMoreComplex(cell = "TCcells", vector_inj)
+	#plTC = PRCCPlot(folder = "./Model_sensitivity//", scd_folder = "CarcMamm_revised_analysis/", RDATA_name = "CarcMamm_revised-analysis.RData", trace_name = "CarcMamm_revised-analysis-",
+	#prcc_name= "prcc_Model_sensitivity.RData")
 
 
- 		 ggsave("pTC.pdf", width = 30, height = 10)
+	pTC <- (spCTC + theme(legend.position = "none")+ labs(title= "Trajectories of TCcells"))+
+		(spTC + labs(title = "TCells at final time"))
 
- 		system(paste0("mv CarcMamm_revised_analysis/ whatifanalysis", variation,"/analysis"))
 
+	ggsave("pTC.pdf", width = 30, height = 10)
 
+	system(paste0("mv CarcMamm_revised_analysis/ whatifanalysis", variation,"/analysis"))
+	system(paste0("mv  whatifanalysis", variation," Results" ))
+
+	return(list(pTC = pTC, pAB = pAB, pCC = pCC))
 }
 
 
@@ -260,7 +259,7 @@ whatifSensitivity <- function(vector_inj, variation){
 densityPlot <- function(index) {
 
 	whatiftrace<-list.files((paste0("./whatifanalysis",index,"/analysis")),
-											 pattern = ".trace")
+													pattern = ".trace")
 
 	load(paste0("./whatifanalysis",index,"/analysis/CarcMamm_revised-analysis.RData"))
 
@@ -268,35 +267,35 @@ densityPlot <- function(index) {
 
 	id.traces<-as.numeric(gsub("[^[:digit:].]", "",whatiftrace) )
 
-#
-# 	ListTraces <- lapply(id.traces,
-# 											 function(x){
-# 											 	trace.tmp <- read.csv(paste0("./whatifanalysis4/analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
-#
-# 											 	trace.tmp$whatif <- 0
-#
-# 											 	return(rbind(trace.tmp))
-# 											 	#return(rbind(cbind(trace.tmp[cell], trace.tmp["Time"], trace.tmp["id"], trace.tmp["vc"])))
-# 											 })
-#
-#
-#
-# 	traces0 <- do.call("rbind", ListTraces)
-# 	traces1 <- do.call("rbind", ListTraces)
-# 	traces2 <- do.call("rbind", ListTraces)
-# 	traces3 <- do.call("rbind", ListTraces)
-# 	traces4 <- do.call("rbind", ListTraces)
-#
-# 	save(traces0, traces1, traces2, traces3, traces4, file = "whatif_traces.RData")
+	#
+	# 	ListTraces <- lapply(id.traces,
+	# 											 function(x){
+	# 											 	trace.tmp <- read.csv(paste0("./whatifanalysis4/analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
+	#
+	# 											 	trace.tmp$whatif <- 0
+	#
+	# 											 	return(rbind(trace.tmp))
+	# 											 	#return(rbind(cbind(trace.tmp[cell], trace.tmp["Time"], trace.tmp["id"], trace.tmp["vc"])))
+	# 											 })
+	#
+	#
+	#
+	# 	traces0 <- do.call("rbind", ListTraces)
+	# 	traces1 <- do.call("rbind", ListTraces)
+	# 	traces2 <- do.call("rbind", ListTraces)
+	# 	traces3 <- do.call("rbind", ListTraces)
+	# 	traces4 <- do.call("rbind", ListTraces)
+	#
+	# 	save(traces0, traces1, traces2, traces3, traces4, file = "whatif_traces.RData")
 
 
 
 	lastValuecells <-t(sapply(1:length(whatiftrace),
-															function(x){
-																trace.tmp <- read.csv(paste0("./whatifanalysis",index,"/analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
+														function(x){
+															trace.tmp <- read.csv(paste0("./whatifanalysis",index,"/analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
 
-																return(c(index,trace.tmp[1069,"CCcells"],trace.tmp[1069,"ABcell"],trace.tmp[1069,"TCcells"]))
-															}) )
+															return(c(index,trace.tmp[1069,"CCcells"],trace.tmp[1069,"ABcell"],trace.tmp[1069,"TCcells"]))
+														}) )
 
 
 

@@ -10,7 +10,8 @@ This repository contains R scripts for generating and analyzing models of the Ca
 
 ## Overview
 
-The project performs a detailed analysis of a biological network model using stochastic simulations. This analysis includes running simulations with different parameter settings, generating plots to visualize the behavior of the model, and conducting sensitivity analysis to assess the impact of various parameters on the system's output.
+The project performs a detailed analysis of a biological network model using stochastic simulations. This analysis includes running simulations with different parameter settings, generating plots to visualize the behavior of the model, and conducting sensitivity analysis to assess the impact of various parameters on the system's output. 
+We underlying that to generate the figures reported in [1], the "Main.R" script has to be run.
 
 ## Features
 
@@ -32,7 +33,7 @@ To set up the project, follow these steps:
 2. Install the required R packages:
 
 	```r
-		install.packages(c("ggplot2", "patchwork", "dplyr","devtools"))
+		install.packages(c("ggplot2", "patchwork", "dplyr","devtools","fdatest","readr","ggpubr"))
 		devtools::install_github('qBioTurin/epimod', ref='master', dependencies=TRUE)
 	```
 
@@ -65,11 +66,13 @@ To run the analysis, source the required scripts and execute the main R script (
 
 	- SensitivityPlot.R: Includes functions for conducting and plotting sensitivity analysis.
 	
-	- main.R: The main script orchestrating the model generation, analysis, and plotting.
+	- Main.R: The main script orchestrating the model generation, analysis, and plotting.
 
 
 
+# Reference
 
+[1]  M. Beccuti, G. Franceschinis, M. Pennisi, S. Pernice and I. Terrone; *Petri Net modeling and Stochastic Simulation of a Cancer Vaccine*. Proceedings of the $18^{th}$ International Conference on Computational Intelligence methods for Bioinformatics and Biostatistics, (CIBB 2023). Padova, Italia, September 06-08 2023.
 
 
 

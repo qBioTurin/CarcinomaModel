@@ -8,9 +8,9 @@ title = c("Untread","Chronic Vaccination","Early Vaccination")
 i = 1
 pl = list()
 traceall = list()
-for(tracefile in c("CarcMamm_revised_analysis/CarcMamm_revised-analysis-1.trace",
-									 "CronCarcMamm_revised_analysis50/CarcMamm_revised-analysis-1.trace",
-									 "EarlyCarcMamm_revised_analysis50/CarcMamm_revised-analysis-1.trace"))
+for(tracefile in c("Results/CarcMamm_revised_analysis/CarcMamm_revised-analysis-1.trace",
+									 "Results/CronCarcMamm_revised_analysis50/CarcMamm_revised-analysis-1.trace",
+									 "Results/EarlyCarcMamm_revised_analysis50/CarcMamm_revised-analysis-1.trace"))
 {
 	output <- read.csv(tracefile, sep = "")
 
@@ -55,12 +55,12 @@ plll = pl[[1]] /pl[[3]] / pl[[2]]
 
 ggsave(plot = plll,filename = "3cases.png",
 			 path = "./Plots/",
-			 device = "png",width = 8,height = 3)
+			 device = "png",width = 14,height = 9)
 
 
 trace = do.call(rbind,traceall)
 trace$Place = factor(trace$Place,
-										 levels = c("CCcells","ABcell","TCcells"))
+										 levels = c("CCcells","ABcell","TCcells"),labels =c("CC cells","AB cells","TC cells") )
 
 plll = trace %>%  ggplot()+
 	geom_boxplot(aes(x = Time/3,group = Time/3, y = Marking,col=Place))+
@@ -74,12 +74,17 @@ plll = trace %>%  ggplot()+
 			 y = "Number of cells")+
 	theme_bw()+
 	theme(legend.position = "none")+
-	scale_color_manual(values = c("#2F464D","#64A287","#AFBAA2"))
+	scale_color_manual(values = c("#2F464D","#64A287","#AFBAA2"))+
+	theme(text = element_text(size = 20))
 
 plll
 
 ggsave(plot = plll,
-			 filename = "3casesNOline.pdf",
+			 filename = "3cases.pdf",
 			 path = "./Plots/",
 			 device = "pdf",
 			 width = 12,height = 6)
+
+ggsave(plot = plll,filename = "3cases.png",
+			 path = "./Plots/",
+			 device = "png",width = 12,height = 6)

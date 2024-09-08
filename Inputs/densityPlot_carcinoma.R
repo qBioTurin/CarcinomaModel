@@ -6,10 +6,10 @@ library(ggrepel)
 
 densityPlot <- function(index) {
 
-  whatiftrace<-list.files((paste0("./whatifanalysis",index,"/analysis")),
+  whatiftrace<-list.files((paste0("./Results/whatifanalysis",index,"/analysis")),
                           pattern = ".trace")
 
-  load(paste0("./whatifanalysis",index,"/analysis/CarcMamm_revised-analysis.RData"))
+  load(paste0("./Results/whatifanalysis",index,"/analysis/CarcMamm_revised-analysis.RData"))
 
 
 
@@ -19,7 +19,7 @@ densityPlot <- function(index) {
 
   lastValuecells <-t(sapply(1:length(whatiftrace),
                             function(x){
-                              trace.tmp <- read.csv(paste0("./whatifanalysis",index,"/analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
+                              trace.tmp <- read.csv(paste0("./Results/whatifanalysis",index,"/analysis/", "CarcMamm_revised-analysis-", x, ".trace"), sep = "")
 
                               return(c(index,trace.tmp[1069,"CCcells"],trace.tmp[1069,"ABcell"],trace.tmp[1069,"TCcells"]))
                             }) )
@@ -85,4 +85,4 @@ pl +
   geom_label_repel(data = dataPercFinal, aes(x = sep, y =  y, label = paste0(D*100,"%"), color = whatif),box.padding = 0.5,min.segment.length = Inf) +
   guides(col="none")+labs(y = "Density")
 
-ggsave(,filename = "density013New.pdf",height = 8,width = 12)
+ggsave(,filename = "Plots/density013New.pdf",height = 8,width = 12)
